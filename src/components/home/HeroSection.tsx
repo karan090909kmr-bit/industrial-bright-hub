@@ -32,10 +32,6 @@ export function HeroSection() {
               <span className="block text-accent">Fabric Materials & Custom Workwear</span>
             </h1>
             
-            <p className="text-base text-primary-foreground/90 mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-up font-medium" style={{ animationDelay: '0.15s' }}>
-              Manufacturers & suppliers of coveralls, lab coats, scrub suits, corporate uniforms, and industrial fabric solutions.
-            </p>
-            
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
               Equip your business with high-quality industrial consumables, safety wear, and customized fabric products—manufactured to meet your exact requirements with reliable quality and competitive pricing.
             </p>
