@@ -28,13 +28,16 @@ export function HeroSection() {
             </div>
             
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              Premium Industrial
-              <span className="block text-accent">Tools & Supplies</span>
+              Premium Industrial Consumables,
+              <span className="block text-accent">Fabric Materials & Custom Workwear</span>
             </h1>
             
+            <p className="text-base text-primary-foreground/90 mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-up font-medium" style={{ animationDelay: '0.15s' }}>
+              Manufacturers & suppliers of coveralls, lab coats, scrub suits, corporate uniforms, and industrial fabric solutions.
+            </p>
+            
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              Equip your business with top-quality industrial tools, safety equipment, 
-              abrasives, and consumables. Reliable products, competitive prices, exceptional service.
+              Equip your business with high-quality industrial consumables, safety wear, and customized fabric products—manufactured to meet your exact requirements with reliable quality and competitive pricing.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-up" style={{ animationDelay: '0.3s' }}>
