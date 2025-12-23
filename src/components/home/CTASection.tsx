@@ -1,0 +1,41 @@
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Phone, ArrowRight } from 'lucide-react';
+
+export function CTASection() {
+  return (
+    <section className="section-padding bg-primary relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+      </div>
+      
+      <div className="relative container-custom mx-auto text-center">
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6 max-w-3xl mx-auto">
+          Ready to Equip Your Business with Quality Supplies?
+        </h2>
+        <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
+          Contact us today for a personalized quote. Our team is ready to help you 
+          find the right products for your industrial needs.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button variant="hero" size="xl" asChild>
+            <Link to="/contact" className="flex items-center gap-2">
+              Request a Quote
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </Button>
+          <Button variant="hero-outline" size="xl" asChild>
+            <a href="tel:+1234567890" className="flex items-center gap-2">
+              <Phone className="h-5 w-5" />
+              Call Us Now
+            </a>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
