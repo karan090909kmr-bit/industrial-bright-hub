@@ -31,8 +31,8 @@ const About = () => {
             About Our Company
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            For over 28 years, we've been the trusted partner for businesses 
-            seeking quality industrial supplies and exceptional service.
+            Manufacturers & suppliers of premium industrial consumables, custom workwear, 
+            and fabric solutions designed to meet your exact requirements.
           </p>
         </div>
       </section>
@@ -46,25 +46,23 @@ const About = () => {
                 Our Story
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Building Trust Through Quality Since 1995
+                Manufacturing Excellence & Quality Supply
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 1995, Industrial Supply Co. began as a small family-owned 
-                  business with a simple mission: provide businesses with reliable, 
-                  high-quality industrial products at fair prices.
+                  We are dedicated manufacturers and suppliers specializing in industrial 
+                  consumables, fabric materials, and custom workwear solutions. Our mission 
+                  is to provide businesses with high-quality products at competitive prices.
                 </p>
                 <p>
-                  Over the years, we've grown from a local supplier to a trusted 
-                  partner serving businesses nationwide. Our success is built on 
-                  strong relationships, industry expertise, and an unwavering 
-                  commitment to customer satisfaction.
+                  From coveralls and lab coats to scrub suits and corporate uniforms, we 
+                  manufacture custom workwear tailored to your exact specifications. Our 
+                  industrial fabric solutions serve diverse industries with reliable quality.
                 </p>
                 <p>
-                  Today, we offer a comprehensive range of industrial tools, safety 
-                  equipment, abrasives, tapes, pneumatic tools, and consumables. 
-                  Our team of experts is dedicated to helping you find the right 
-                  products for your specific needs.
+                  We also supply a comprehensive range of industrial consumables including 
+                  abrasives, self adhesive tapes, safety products, and essential supplies 
+                  that keep your operations running smoothly.
                 </p>
               </div>
             </div>
@@ -73,20 +71,20 @@ const About = () => {
               <div className="bg-muted rounded-2xl p-8 lg:p-12">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">1995</div>
-                    <div className="text-muted-foreground text-sm">Year Founded</div>
-                  </div>
-                  <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">50+</div>
-                    <div className="text-muted-foreground text-sm">Team Members</div>
+                    <div className="font-display text-4xl font-bold text-primary mb-2">500+</div>
+                    <div className="text-muted-foreground text-sm">Products Available</div>
                   </div>
                   <div className="text-center p-6 bg-card rounded-xl shadow-card">
                     <div className="font-display text-4xl font-bold text-primary mb-2">1000+</div>
                     <div className="text-muted-foreground text-sm">Clients Served</div>
                   </div>
                   <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">50K+</div>
-                    <div className="text-muted-foreground text-sm">Orders Fulfilled</div>
+                    <div className="font-display text-4xl font-bold text-primary mb-2">100%</div>
+                    <div className="text-muted-foreground text-sm">Custom Solutions</div>
+                  </div>
+                  <div className="text-center p-6 bg-card rounded-xl shadow-card">
+                    <div className="font-display text-4xl font-bold text-primary mb-2">24/7</div>
+                    <div className="text-muted-foreground text-sm">Support Available</div>
                   </div>
                 </div>
               </div>
@@ -105,9 +103,9 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the most reliable supplier of industrial products, delivering 
-                exceptional quality, competitive pricing, and outstanding service 
-                that helps businesses operate efficiently and safely.
+                To be the most reliable manufacturer and supplier of industrial consumables 
+                and custom workwear, delivering exceptional quality, competitive pricing, 
+                and products manufactured to meet your exact requirements.
               </p>
             </div>
             
@@ -117,9 +115,9 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To become the leading industrial supply partner recognized for 
-                innovation, sustainability, and an unwavering commitment to 
-                customer success across all industries we serve.
+                To become the leading industrial supply partner recognized for custom 
+                manufacturing excellence, quality fabric solutions, and an unwavering 
+                commitment to customer success across all industries we serve.
               </p>
             </div>
           </div>
@@ -167,7 +165,7 @@ const About = () => {
             Ready to Partner with Us?
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can support your business with quality industrial supplies.
+            Let's discuss how we can support your business with quality industrial supplies and custom manufacturing.
           </p>
           <Button variant="hero" size="xl" asChild>
             <Link to="/contact" className="flex items-center gap-2">

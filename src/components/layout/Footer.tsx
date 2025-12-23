@@ -8,10 +8,10 @@ const footerLinks = {
     { name: 'Contact Us', href: '/contact' },
   ],
   products: [
-    { name: 'Industrial Tools', href: '/products#tools' },
-    { name: 'Safety Products', href: '/products#safety' },
     { name: 'Abrasives', href: '/products#abrasives' },
-    { name: 'Pneumatic Tools', href: '/products#pneumatic' },
+    { name: 'Self Adhesive Tapes', href: '/products#tapes' },
+    { name: 'Safety Products', href: '/products#safety' },
+    { name: 'Custom Workwear', href: '/products#workwear' },
   ],
 };
 
@@ -32,8 +32,8 @@ export function Footer() {
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              Your trusted partner for quality industrial tools, safety equipment, and consumables. 
-              Serving businesses nationwide with reliable products and exceptional service.
+              Manufacturers & suppliers of coveralls, lab coats, scrub suits, corporate uniforms, 
+              industrial consumables, and fabric solutions.
             </p>
           </div>
 

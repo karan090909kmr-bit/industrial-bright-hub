@@ -1,13 +1,20 @@
 import { Link } from 'react-router-dom';
-import { Wrench, HardHat, Disc, ScrollText, Wind, Package, ArrowRight } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, ArrowRight } from 'lucide-react';
 
 const categories = [
   {
-    id: 'tools',
-    name: 'Industrial Tools',
-    description: 'Hand tools, power tools, and precision instruments for every industrial application.',
-    icon: Wrench,
-    color: 'bg-blue-500/10 text-blue-600',
+    id: 'abrasives',
+    name: 'Abrasives',
+    description: 'Grinding wheels, cutting discs, sandpaper, and high-performance abrasive materials.',
+    icon: Disc,
+    color: 'bg-red-500/10 text-red-600',
+  },
+  {
+    id: 'tapes',
+    name: 'Self Adhesive Tapes',
+    description: 'Industrial-strength self adhesive tapes for packaging, masking, and bonding applications.',
+    icon: ScrollText,
+    color: 'bg-green-500/10 text-green-600',
   },
   {
     id: 'safety',
@@ -17,32 +24,25 @@ const categories = [
     color: 'bg-amber-500/10 text-amber-600',
   },
   {
-    id: 'abrasives',
-    name: 'Abrasives',
-    description: 'Grinding wheels, cutting discs, sandpaper, and abrasive materials.',
-    icon: Disc,
-    color: 'bg-red-500/10 text-red-600',
-  },
-  {
-    id: 'tapes',
-    name: 'Tapes & Adhesives',
-    description: 'Industrial tapes, adhesives, sealants, and bonding solutions.',
-    icon: ScrollText,
-    color: 'bg-green-500/10 text-green-600',
-  },
-  {
-    id: 'pneumatic',
-    name: 'Pneumatic Tools',
-    description: 'Air-powered tools, compressors, and pneumatic accessories.',
-    icon: Wind,
-    color: 'bg-purple-500/10 text-purple-600',
-  },
-  {
     id: 'consumables',
-    name: 'Consumables',
-    description: 'Welding supplies, lubricants, and essential industrial consumables.',
+    name: 'Industrial Consumables',
+    description: 'Welding supplies, lubricants, cleaners, and essential industrial consumables.',
     icon: Package,
     color: 'bg-teal-500/10 text-teal-600',
+  },
+  {
+    id: 'workwear',
+    name: 'Custom Workwear',
+    description: 'Coveralls, lab coats, scrub suits, and corporate uniforms manufactured to your specifications.',
+    icon: Shirt,
+    color: 'bg-blue-500/10 text-blue-600',
+  },
+  {
+    id: 'fabrics',
+    name: 'Industrial Fabrics',
+    description: 'High-quality fabric materials and textile solutions for industrial applications.',
+    icon: Factory,
+    color: 'bg-purple-500/10 text-purple-600',
   },
 ];
 
@@ -56,11 +56,11 @@ export function ProductCategories() {
             Our Products
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Complete Range of Industrial Supplies
+            Industrial Consumables & Custom Workwear
           </h2>
           <p className="text-muted-foreground text-lg">
-            From essential tools to specialized equipment, we provide everything your 
-            business needs to operate efficiently and safely.
+            From industrial consumables to custom-manufactured workwear, we provide everything your 
+            business needs with reliable quality and competitive pricing.
           </p>
         </div>
 

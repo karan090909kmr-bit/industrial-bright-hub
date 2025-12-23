@@ -44,11 +44,11 @@ export function WhyChooseUs() {
               Why Choose Us
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Your Trusted Partner in Industrial Excellence
+              Your Trusted Partner for Industrial Consumables & Custom Workwear
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              For over two decades, we've been the go-to supplier for businesses 
-              seeking quality industrial products. Our commitment to excellence 
+              As manufacturers and suppliers of quality industrial consumables, safety products, 
+              and custom workwear, our commitment to excellence and competitive pricing 
               sets us apart from the competition.
             </p>
             

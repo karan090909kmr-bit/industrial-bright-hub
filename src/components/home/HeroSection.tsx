@@ -5,7 +5,7 @@ import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
 const features = [
   { icon: Shield, text: 'Quality Guaranteed' },
   { icon: Truck, text: 'Fast Delivery' },
-  { icon: Award, text: 'Industry Leaders' },
+  { icon: Award, text: 'Custom Manufacturing' },
 ];
 
 export function HeroSection() {
@@ -24,7 +24,7 @@ export function HeroSection() {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              Trusted Industrial Partner Since 1995
+              Manufacturers & Suppliers of Custom Workwear
             </div>
             
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
