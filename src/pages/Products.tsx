@@ -1,16 +1,24 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Wrench, HardHat, Disc, ScrollText, Wind, Package, ArrowRight, CheckCircle } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, ArrowRight, CheckCircle } from 'lucide-react';
 
 const categories = [
   {
-    id: 'tools',
-    name: 'Industrial Tools',
-    description: 'Professional-grade hand tools, power tools, and precision instruments designed for demanding industrial applications.',
-    icon: Wrench,
-    color: 'bg-blue-500/10 text-blue-600 border-blue-500/20',
-    features: ['Hand Tools & Wrenches', 'Power Tools', 'Measuring Instruments', 'Cutting Tools', 'Specialty Tools'],
+    id: 'abrasives',
+    name: 'Abrasives',
+    description: 'High-performance grinding wheels, cutting discs, sandpaper, and abrasive materials for surface preparation and finishing.',
+    icon: Disc,
+    color: 'bg-red-500/10 text-red-600 border-red-500/20',
+    features: ['Grinding Wheels', 'Cutting Discs', 'Sandpaper & Sheets', 'Flap Discs', 'Wire Brushes'],
+  },
+  {
+    id: 'tapes',
+    name: 'Self Adhesive Tapes',
+    description: 'Industrial-strength self adhesive tapes for packaging, masking, electrical, and bonding applications.',
+    icon: ScrollText,
+    color: 'bg-green-500/10 text-green-600 border-green-500/20',
+    features: ['Packaging Tapes', 'Masking Tapes', 'Electrical Tape', 'Double-Sided Tape', 'Specialty Tapes'],
   },
   {
     id: 'safety',
@@ -21,36 +29,28 @@ const categories = [
     features: ['Hard Hats & Helmets', 'Safety Glasses & Goggles', 'Gloves & Hand Protection', 'Respiratory Protection', 'High-Visibility Clothing'],
   },
   {
-    id: 'abrasives',
-    name: 'Abrasives',
-    description: 'High-performance grinding wheels, cutting discs, sandpaper, and abrasive materials for surface preparation.',
-    icon: Disc,
-    color: 'bg-red-500/10 text-red-600 border-red-500/20',
-    features: ['Grinding Wheels', 'Cutting Discs', 'Sandpaper & Sheets', 'Flap Discs', 'Wire Brushes'],
-  },
-  {
-    id: 'tapes',
-    name: 'Tapes & Adhesives',
-    description: 'Industrial-strength tapes, adhesives, sealants, and bonding solutions for every application.',
-    icon: ScrollText,
-    color: 'bg-green-500/10 text-green-600 border-green-500/20',
-    features: ['Electrical Tape', 'Duct & Packaging Tape', 'Double-Sided Tape', 'Industrial Adhesives', 'Sealants'],
-  },
-  {
-    id: 'pneumatic',
-    name: 'Pneumatic Tools',
-    description: 'Reliable air-powered tools, compressors, and pneumatic accessories for efficient operations.',
-    icon: Wind,
-    color: 'bg-purple-500/10 text-purple-600 border-purple-500/20',
-    features: ['Air Impact Wrenches', 'Air Drills & Grinders', 'Air Compressors', 'Pneumatic Staplers', 'Air Hoses & Fittings'],
-  },
-  {
     id: 'consumables',
-    name: 'Consumables',
-    description: 'Essential welding supplies, lubricants, cleaners, and industrial consumables to keep operations running.',
+    name: 'Industrial Consumables',
+    description: 'Essential welding supplies, lubricants, cleaners, and industrial consumables to keep operations running smoothly.',
     icon: Package,
     color: 'bg-teal-500/10 text-teal-600 border-teal-500/20',
     features: ['Welding Rods & Wire', 'Industrial Lubricants', 'Cleaning Supplies', 'Fasteners & Hardware', 'Maintenance Supplies'],
+  },
+  {
+    id: 'workwear',
+    name: 'Custom Workwear',
+    description: 'Custom-manufactured coveralls, lab coats, scrub suits, and corporate uniforms tailored to your specifications.',
+    icon: Shirt,
+    color: 'bg-blue-500/10 text-blue-600 border-blue-500/20',
+    features: ['Coveralls', 'Lab Coats', 'Scrub Suits', 'Corporate Uniforms', 'Custom Embroidery'],
+  },
+  {
+    id: 'fabrics',
+    name: 'Industrial Fabrics',
+    description: 'High-quality fabric materials and textile solutions for industrial and commercial applications.',
+    icon: Factory,
+    color: 'bg-purple-500/10 text-purple-600 border-purple-500/20',
+    features: ['Woven Fabrics', 'Non-Woven Materials', 'Technical Textiles', 'Protective Fabrics', 'Custom Fabric Solutions'],
   },
 ];
 
@@ -64,8 +64,8 @@ const Products = () => {
             Our Products
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Explore our comprehensive range of industrial supplies, from essential tools 
-            to specialized equipment for every industry.
+            Explore our comprehensive range of industrial consumables, safety products, 
+            custom workwear, and fabric solutions manufactured to meet your exact requirements.
           </p>
         </div>
       </section>
@@ -126,16 +126,16 @@ const Products = () => {
       <section className="section-padding bg-muted">
         <div className="container-custom mx-auto text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            Can't Find What You Need?
+            Need Custom Manufacturing?
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            Our catalog extends beyond what's listed here. Contact us with your 
-            specific requirements and we'll source it for you.
+            We specialize in custom manufacturing of workwear and fabric products. 
+            Contact us with your specific requirements and we'll deliver to your exact specifications.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="default" size="xl" asChild>
               <Link to="/contact" className="flex items-center gap-2">
-                Contact Us
+                Get a Quote
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
