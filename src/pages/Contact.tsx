@@ -43,6 +43,7 @@ const Contact = () => {
     phone: '',
     company: '',
     productName: '',
+    requiredQuantity: '',
     message: '',
   });
 
@@ -78,6 +79,7 @@ const Contact = () => {
       phone: '',
       company: '',
       productName: '',
+      requiredQuantity: '',
       message: '',
     });
     setIsSubmitting(false);
@@ -167,17 +169,30 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="productName">Product Name *</Label>
-                    <Input
-                      id="productName"
-                      name="productName"
-                      value={formData.productName}
-                      onChange={handleChange}
-                      placeholder="Enter product name"
-                      required
-                      className="h-12"
-                    />
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="productName">Product Name *</Label>
+                      <Input
+                        id="productName"
+                        name="productName"
+                        value={formData.productName}
+                        onChange={handleChange}
+                        placeholder="Enter product name"
+                        required
+                        className="h-12"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="requiredQuantity">Required Quantity</Label>
+                      <Input
+                        id="requiredQuantity"
+                        name="requiredQuantity"
+                        value={formData.requiredQuantity}
+                        onChange={handleChange}
+                        placeholder="Enter Required Qty."
+                        className="h-12"
+                      />
+                    </div>
                   </div>
 
                   <div className="space-y-2">
