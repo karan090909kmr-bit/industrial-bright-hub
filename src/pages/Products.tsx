@@ -167,7 +167,7 @@ const Products = () => {
                         {category.description}
                       </p>
                       <Button variant="accent" className="w-fit" asChild>
-                        <Link to="/contact" className="flex items-center gap-2">
+                        <Link to={`/contact?product=${encodeURIComponent(category.name)}`} className="flex items-center gap-2">
                           Request Quote
                           <ArrowRight className="h-4 w-4" />
                         </Link>
@@ -179,10 +179,14 @@ const Products = () => {
                       <h3 className="font-semibold text-foreground mb-6">Products Include:</h3>
                       <div className="grid sm:grid-cols-2 gap-4">
                         {category.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-3">
+                          <Link
+                            key={idx}
+                            to={`/contact?product=${encodeURIComponent(feature)}`}
+                            className="flex items-center gap-3 hover:text-primary transition-colors group"
+                          >
                             <CheckCircle className="h-5 w-5 text-primary shrink-0" />
-                            <span className="text-muted-foreground">{feature}</span>
-                          </div>
+                            <span className="text-muted-foreground group-hover:text-primary transition-colors underline-offset-2 hover:underline">{feature}</span>
+                          </Link>
                         ))}
                       </div>
                     </div>
