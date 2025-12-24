@@ -8,6 +8,9 @@ const footerLinks = {
     { name: 'Contact Us', href: '/contact' },
   ],
   products: [
+    { name: 'Abrasives', href: '/products#abrasives' },
+    { name: 'Self Adhesive Tapes', href: '/products#tapes' },
+    { name: 'Workwear', href: '/products#workwear' },
     { name: 'Polishing Pads', href: '/products#polishing-pads' },
     { name: 'Wipes', href: '/products#wipes' },
     { name: 'Backup Pad', href: '/products#backup-pad' },
@@ -17,12 +20,9 @@ const footerLinks = {
     { name: 'Paint Booth Chemicals', href: '/products#paint-booth-chemicals' },
     { name: 'Pneumatic Tools', href: '/products#pneumatic-tools' },
     { name: 'Industrial Fabrics', href: '/products#fabrics' },
-    { name: 'Workwear', href: '/products#workwear' },
     { name: 'Industrial Consumables', href: '/products#consumables' },
     { name: 'Safety Products', href: '/products#safety' },
     { name: 'Cleanroom Products', href: '/products#cleanroom-products' },
-    { name: 'Self Adhesive Tapes', href: '/products#tapes' },
-    { name: 'Abrasives', href: '/products#abrasives' },
   ],
 };
 

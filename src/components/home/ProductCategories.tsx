@@ -3,6 +3,27 @@ import { Disc, ScrollText, HardHat, Package, Shirt, Factory, ArrowRight, Sparkle
 
 const categories = [
   {
+    id: 'abrasives',
+    name: 'Abrasives',
+    description: 'Sandpapers, sanding discs, grinding belts, flap discs, and PSA/Rolloc discs.',
+    icon: Disc,
+    color: 'bg-red-500/10 text-red-600',
+  },
+  {
+    id: 'tapes',
+    name: 'Self Adhesive Tapes',
+    description: 'Packaging, masking, double-sided, floor marking, and specialty industrial tapes.',
+    icon: ScrollText,
+    color: 'bg-green-500/10 text-green-600',
+  },
+  {
+    id: 'workwear',
+    name: 'Workwear',
+    description: 'Lint-free garments, ESD clothing, lab coats, coveralls, and corporate uniforms.',
+    icon: Shirt,
+    color: 'bg-blue-500/10 text-blue-600',
+  },
+  {
     id: 'polishing-pads',
     name: 'Polishing Pads',
     description: 'High-quality orange foam pads and natural wool buffing pads for surface finishing.',
@@ -66,13 +87,6 @@ const categories = [
     color: 'bg-purple-500/10 text-purple-600',
   },
   {
-    id: 'workwear',
-    name: 'Workwear',
-    description: 'Lint-free garments, ESD clothing, lab coats, coveralls, and corporate uniforms.',
-    icon: Shirt,
-    color: 'bg-blue-500/10 text-blue-600',
-  },
-  {
     id: 'consumables',
     name: 'Industrial Consumables',
     description: 'Industrial lubricants, cleaning supplies, and maintenance materials.',
@@ -92,20 +106,6 @@ const categories = [
     description: 'Sticky mats, ESD shoes, and ESD slippers for contamination control.',
     icon: Shield,
     color: 'bg-violet-500/10 text-violet-600',
-  },
-  {
-    id: 'tapes',
-    name: 'Self Adhesive Tapes',
-    description: 'Packaging, masking, double-sided, floor marking, and specialty industrial tapes.',
-    icon: ScrollText,
-    color: 'bg-green-500/10 text-green-600',
-  },
-  {
-    id: 'abrasives',
-    name: 'Abrasives',
-    description: 'Sandpapers, sanding discs, grinding belts, flap discs, and PSA/Rolloc discs.',
-    icon: Disc,
-    color: 'bg-red-500/10 text-red-600',
   },
 ];
 
