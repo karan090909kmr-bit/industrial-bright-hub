@@ -43,8 +43,8 @@ export function HeroSection() {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="hero-outline" size="xl" asChild>
-                <Link to="/products">Browse Products</Link>
+              <Button variant="hero-outline" size="xl" asChild className="text-lg font-bold uppercase tracking-wide">
+                <Link to="/products">Our Products</Link>
               </Button>
             </div>
 
