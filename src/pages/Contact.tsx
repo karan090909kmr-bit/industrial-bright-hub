@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -34,14 +35,23 @@ const contactInfo = [
 
 const Contact = () => {
   const { toast } = useToast();
+  const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     company: '',
+    productName: '',
     message: '',
   });
+
+  useEffect(() => {
+    const product = searchParams.get('product');
+    if (product) {
+      setFormData(prev => ({ ...prev, productName: product }));
+    }
+  }, [searchParams]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -67,6 +77,7 @@ const Contact = () => {
       email: '',
       phone: '',
       company: '',
+      productName: '',
       message: '',
     });
     setIsSubmitting(false);
@@ -154,6 +165,19 @@ const Contact = () => {
                         className="h-12"
                       />
                     </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="productName">Product Name *</Label>
+                    <Input
+                      id="productName"
+                      name="productName"
+                      value={formData.productName}
+                      onChange={handleChange}
+                      placeholder="Enter product name"
+                      required
+                      className="h-12"
+                    />
                   </div>
 
                   <div className="space-y-2">
