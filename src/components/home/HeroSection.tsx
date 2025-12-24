@@ -69,15 +69,15 @@ export function HeroSection() {
               {/* Stats cards */}
               <div className="relative grid grid-cols-2 gap-4">
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20">
-                  <div className="text-4xl font-display font-bold text-accent mb-2">500+</div>
+                  <div className="text-4xl font-display font-bold text-accent mb-2">300+</div>
                   <div className="text-primary-foreground/80 text-sm">Products Available</div>
                 </div>
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 mt-8">
-                  <div className="text-4xl font-display font-bold text-accent mb-2">28+</div>
+                  <div className="text-4xl font-display font-bold text-accent mb-2">8+</div>
                   <div className="text-primary-foreground/80 text-sm">Years Experience</div>
                 </div>
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20">
-                  <div className="text-4xl font-display font-bold text-accent mb-2">1000+</div>
+                  <div className="text-4xl font-display font-bold text-accent mb-2">100+</div>
                   <div className="text-primary-foreground/80 text-sm">Happy Clients</div>
                 </div>
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 mt-8">
