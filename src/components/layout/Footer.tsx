@@ -12,6 +12,14 @@ const footerLinks = {
     { name: 'Self Adhesive Tapes', href: '/products#tapes' },
     { name: 'Safety Products', href: '/products#safety' },
     { name: 'Custom Workwear', href: '/products#workwear' },
+    { name: 'Industrial Consumables', href: '/products#consumables' },
+    { name: 'Industrial Fabrics', href: '/products#fabrics' },
+    { name: 'Filters', href: '/products#filters' },
+    { name: 'Paint Booth Chemicals', href: '/products#paint-booth-chemicals' },
+    { name: 'Paint Repairing System', href: '/products#paint-repairing-system' },
+    { name: 'Backup Pad', href: '/products#backup-pad' },
+    { name: 'Tack Rag', href: '/products#tack-rag' },
+    { name: 'Pneumatic Tools', href: '/products#pneumatic-tools' },
   ],
 };
 
