@@ -5,6 +5,30 @@ import { Disc, ScrollText, HardHat, Package, Shirt, Factory, ArrowRight, CheckCi
 
 const categories = [
   {
+    id: 'abrasives',
+    name: 'Abrasives',
+    description: 'High-performance grinding and sanding materials for surface preparation and finishing.',
+    icon: Disc,
+    color: 'bg-red-500/10 text-red-600 border-red-500/20',
+    features: ['Aluminium Oxide / Silicon Carbide Sandpapers', 'Sanding Discs (paper, cloth, film backings)', 'Coated Grinding & Finishing Belts', 'Waterproof Sandpaper Sheets (wide grit range up to 7000+)', 'Cloth-backed Sanding Cloths', 'Flap Discs', 'PSA Disc', 'Rolloc Disc'],
+  },
+  {
+    id: 'tapes',
+    name: 'Self Adhesive Tapes',
+    description: 'Industrial-strength self adhesive tapes for packaging, masking, and bonding applications.',
+    icon: ScrollText,
+    color: 'bg-green-500/10 text-green-600 border-green-500/20',
+    features: ['BOPP / Packaging Tapes', 'Masking Tapes', 'D/S Polyester Tape', 'D/S Tissue Tape', 'D/S Cloth Tape', 'D/S Foam Tape', 'D/S Red Polyester Tape (Filmic Liner)', 'Floor Marking Tape', 'Aluminium Foil Tape', 'Duct Tape', 'Filament Tape (Mono & Cross)', 'Blue Door Holding Tape', 'Surface Protection Tape', 'Single Side Foam Tape', 'Acrylic Foam Tape (VHB Tape)', 'Paint Adhesion Testing Tape', 'Kapton® / Polyimide Tapes', 'High Temperature Masking Tapes'],
+  },
+  {
+    id: 'workwear',
+    name: 'Workwear',
+    description: 'Custom-manufactured workwear including lint-free garments, ESD clothing, and corporate uniforms.',
+    icon: Shirt,
+    color: 'bg-blue-500/10 text-blue-600 border-blue-500/20',
+    features: ['Lint Free Pant & Shirt', 'Lint Free Apron', 'Lint Free Coverall', 'Lab Coats', 'ESD Coverall (With/Without Hood)', 'ESD Apron (With/Without Hood)', 'Lint Free Pant & Shirt (With Hood)', 'Lint Free Coverall (With Hood)', 'Non Woven Apron', 'Non Woven Coverall', 'Scrub Suit', 'Corporate Uniforms', 'Custom Workwear and Work Uniforms'],
+  },
+  {
     id: 'polishing-pads',
     name: 'Polishing Pads',
     description: 'High-quality polishing pads for automotive refinishing and surface finishing applications.',
@@ -77,14 +101,6 @@ const categories = [
     features: ['Cotton Waste Fabrics', 'Protective Fabrics', 'Woven Fabrics', 'Cotton Fabrics (In Lumps)', 'Polyester Fabrics (In Lumps)', 'PV Fabrics (In Lumps)'],
   },
   {
-    id: 'workwear',
-    name: 'Workwear',
-    description: 'Custom-manufactured workwear including lint-free garments, ESD clothing, and corporate uniforms.',
-    icon: Shirt,
-    color: 'bg-blue-500/10 text-blue-600 border-blue-500/20',
-    features: ['Lint Free Pant & Shirt', 'Lint Free Apron', 'Lint Free Coverall', 'Lab Coats', 'ESD Coverall (With/Without Hood)', 'ESD Apron (With/Without Hood)', 'Lint Free Pant & Shirt (With Hood)', 'Lint Free Coverall (With Hood)', 'Non Woven Apron', 'Non Woven Coverall', 'Scrub Suit', 'Corporate Uniforms', 'Custom Workwear and Work Uniforms'],
-  },
-  {
     id: 'consumables',
     name: 'Industrial Consumables',
     description: 'Essential industrial consumables including lubricants, cleaning supplies, and maintenance materials.',
@@ -107,22 +123,6 @@ const categories = [
     icon: Shield,
     color: 'bg-violet-500/10 text-violet-600 border-violet-500/20',
     features: ['Sticky Mat', 'ESD Shoes', 'ESD Slippers'],
-  },
-  {
-    id: 'tapes',
-    name: 'Self Adhesive Tapes',
-    description: 'Industrial-strength self adhesive tapes for packaging, masking, and bonding applications.',
-    icon: ScrollText,
-    color: 'bg-green-500/10 text-green-600 border-green-500/20',
-    features: ['BOPP / Packaging Tapes', 'Masking Tapes', 'D/S Polyester Tape', 'D/S Tissue Tape', 'D/S Cloth Tape', 'D/S Foam Tape', 'D/S Red Polyester Tape (Filmic Liner)', 'Floor Marking Tape', 'Aluminium Foil Tape', 'Duct Tape', 'Filament Tape (Mono & Cross)', 'Blue Door Holding Tape', 'Surface Protection Tape', 'Single Side Foam Tape', 'Acrylic Foam Tape (VHB Tape)', 'Paint Adhesion Testing Tape', 'Kapton® / Polyimide Tapes', 'High Temperature Masking Tapes'],
-  },
-  {
-    id: 'abrasives',
-    name: 'Abrasives',
-    description: 'High-performance grinding and sanding materials for surface preparation and finishing.',
-    icon: Disc,
-    color: 'bg-red-500/10 text-red-600 border-red-500/20',
-    features: ['Aluminium Oxide / Silicon Carbide Sandpapers', 'Sanding Discs (paper, cloth, film backings)', 'Coated Grinding & Finishing Belts', 'Waterproof Sandpaper Sheets (wide grit range up to 7000+)', 'Cloth-backed Sanding Cloths', 'Flap Discs', 'PSA Disc', 'Rolloc Disc'],
   },
 ];
 
