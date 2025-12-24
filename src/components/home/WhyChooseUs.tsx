@@ -76,20 +76,20 @@ export function WhyChooseUs() {
             <div className="bg-card rounded-2xl p-8 lg:p-12 shadow-industrial border border-border">
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center p-6 bg-muted rounded-xl">
-                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">8+</div>
-                  <div className="text-muted-foreground text-sm">Years Experience</div>
+                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">500+</div>
+                  <div className="text-muted-foreground text-sm">Products Available</div>
                 </div>
                 <div className="text-center p-6 bg-muted rounded-xl">
-                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">300+</div>
-                  <div className="text-muted-foreground text-sm">Products</div>
+                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">1000+</div>
+                  <div className="text-muted-foreground text-sm">Clients Served</div>
                 </div>
                 <div className="text-center p-6 bg-muted rounded-xl">
-                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">100+</div>
-                  <div className="text-muted-foreground text-sm">Happy Clients</div>
+                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">100%</div>
+                  <div className="text-muted-foreground text-sm">Custom Solutions</div>
                 </div>
                 <div className="text-center p-6 bg-muted rounded-xl">
-                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">99%</div>
-                  <div className="text-muted-foreground text-sm">Satisfaction Rate</div>
+                  <div className="font-display text-4xl lg:text-5xl font-bold text-primary mb-2">24/7</div>
+                  <div className="text-muted-foreground text-sm">Support Available</div>
                 </div>
               </div>
             </div>
