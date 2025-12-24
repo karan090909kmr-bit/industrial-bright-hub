@@ -44,6 +44,48 @@ const categories = [
     icon: Factory,
     color: 'bg-purple-500/10 text-purple-600',
   },
+  {
+    id: 'filters',
+    name: 'Filters',
+    description: 'Industrial-grade filters for paint booths, HVAC systems, and various filtration applications.',
+    icon: Package,
+    color: 'bg-cyan-500/10 text-cyan-600',
+  },
+  {
+    id: 'paint-booth-chemicals',
+    name: 'Paint Booth Chemicals',
+    description: 'Specialized chemicals for paint booth maintenance, coating protection, and surface preparation.',
+    icon: Factory,
+    color: 'bg-orange-500/10 text-orange-600',
+  },
+  {
+    id: 'paint-repairing-system',
+    name: 'Paint Repairing System',
+    description: 'Complete paint repair solutions including pads, compounds, cloths, and spray equipment.',
+    icon: Disc,
+    color: 'bg-rose-500/10 text-rose-600',
+  },
+  {
+    id: 'backup-pad',
+    name: 'Backup Pad',
+    description: 'Professional backup pads and sanding blocks for polishing and surface finishing applications.',
+    icon: Disc,
+    color: 'bg-indigo-500/10 text-indigo-600',
+  },
+  {
+    id: 'tack-rag',
+    name: 'Tack Rag',
+    description: 'High-quality tack rags for dust removal and surface preparation before painting.',
+    icon: ScrollText,
+    color: 'bg-yellow-500/10 text-yellow-600',
+  },
+  {
+    id: 'pneumatic-tools',
+    name: 'Pneumatic Tools',
+    description: 'Professional pneumatic tools for automotive refinishing, metalworking, and industrial applications.',
+    icon: HardHat,
+    color: 'bg-slate-500/10 text-slate-600',
+  },
 ];
 
 export function ProductCategories() {
