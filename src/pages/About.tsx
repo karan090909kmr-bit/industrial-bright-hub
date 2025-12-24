@@ -71,16 +71,16 @@ const About = () => {
               <div className="bg-muted rounded-2xl p-8 lg:p-12">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">500+</div>
+                    <div className="font-display text-4xl font-bold text-primary mb-2">300+</div>
                     <div className="text-muted-foreground text-sm">Products Available</div>
                   </div>
                   <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">1000+</div>
-                    <div className="text-muted-foreground text-sm">Clients Served</div>
+                    <div className="font-display text-4xl font-bold text-primary mb-2">8+</div>
+                    <div className="text-muted-foreground text-sm">Years Experience</div>
                   </div>
                   <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">100%</div>
-                    <div className="text-muted-foreground text-sm">Custom Solutions</div>
+                    <div className="font-display text-4xl font-bold text-primary mb-2">100+</div>
+                    <div className="text-muted-foreground text-sm">Happy Clients</div>
                   </div>
                   <div className="text-center p-6 bg-card rounded-xl shadow-card">
                     <div className="font-display text-4xl font-bold text-primary mb-2">24/7</div>
