@@ -1,7 +1,7 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Disc, ScrollText, HardHat, Package, Shirt, Factory, ArrowRight, CheckCircle, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, ArrowRight, CheckCircle, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers } from 'lucide-react';
 
 const categories = [
   {
@@ -123,6 +123,14 @@ const categories = [
     icon: Shield,
     color: 'bg-violet-500/10 text-violet-600 border-violet-500/20',
     features: ['Sticky Mat', 'ESD Shoes', 'ESD Slippers'],
+  },
+  {
+    id: 'tack-cloth',
+    name: 'Tack Cloth',
+    description: 'High-quality tack cloths designed to remove dust, dirt, and lint from surfaces before painting, staining, or finishing. Our tack cloths provide superior dust pickup without leaving residue, ensuring a flawless finish on automotive, woodworking, and industrial surfaces.',
+    icon: Layers,
+    color: 'bg-yellow-500/10 text-yellow-600 border-yellow-500/20',
+    features: ['Lint Free Tack Rag', 'Cotton Tack Rag'],
   },
 ];
 
