@@ -23,6 +23,7 @@ const footerLinks = {
     { name: 'Industrial Consumables', href: '/products#consumables' },
     { name: 'Safety Products', href: '/products#safety' },
     { name: 'Cleanroom Products', href: '/products#cleanroom-products' },
+    { name: 'Tack Cloth', href: '/products#tack-cloth' },
   ],
 };
 

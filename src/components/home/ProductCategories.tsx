@@ -16,6 +16,7 @@ import fabricsImg from '@/assets/categories/fabrics.jpg';
 import consumablesImg from '@/assets/categories/consumables.jpg';
 import safetyImg from '@/assets/categories/safety.jpg';
 import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
+import tackClothImg from '@/assets/categories/tack-cloth.jpg';
 
 const categories = [
   {
@@ -92,6 +93,11 @@ const categories = [
     id: 'cleanroom-products',
     name: 'Cleanroom Products',
     image: cleanroomProductsImg,
+  },
+  {
+    id: 'tack-cloth',
+    name: 'Tack Cloth',
+    image: tackClothImg,
   },
 ];
 
