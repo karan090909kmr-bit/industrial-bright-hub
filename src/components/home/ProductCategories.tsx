@@ -1,80 +1,97 @@
 import { Link } from 'react-router-dom';
 
+// Import category images
+import abrasivesImg from '@/assets/categories/abrasives.jpg';
+import tapesImg from '@/assets/categories/tapes.jpg';
+import workwearImg from '@/assets/categories/workwear.jpg';
+import polishingPadsImg from '@/assets/categories/polishing-pads.jpg';
+import wipesImg from '@/assets/categories/wipes.jpg';
+import backupPadImg from '@/assets/categories/backup-pad.jpg';
+import sprayGunImg from '@/assets/categories/spray-gun.jpg';
+import polishingCompoundImg from '@/assets/categories/polishing-compound.jpg';
+import filtersImg from '@/assets/categories/filters.jpg';
+import paintBoothChemicalsImg from '@/assets/categories/paint-booth-chemicals.jpg';
+import pneumaticToolsImg from '@/assets/categories/pneumatic-tools.jpg';
+import fabricsImg from '@/assets/categories/fabrics.jpg';
+import consumablesImg from '@/assets/categories/consumables.jpg';
+import safetyImg from '@/assets/categories/safety.jpg';
+import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
+
 const categories = [
   {
     id: 'abrasives',
     name: 'Abrasives',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop',
+    image: abrasivesImg,
   },
   {
     id: 'tapes',
     name: 'Self Adhesive Tapes',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+    image: tapesImg,
   },
   {
     id: 'workwear',
     name: 'Workwear',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
+    image: workwearImg,
   },
   {
     id: 'polishing-pads',
     name: 'Polishing Pads',
-    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=400&fit=crop',
+    image: polishingPadsImg,
   },
   {
     id: 'wipes',
     name: 'Wipes',
-    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=400&fit=crop',
+    image: wipesImg,
   },
   {
     id: 'backup-pad',
     name: 'Backup Pad',
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=400&fit=crop',
+    image: backupPadImg,
   },
   {
     id: 'spray-gun',
     name: 'Spray Gun',
-    image: 'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=600&h=400&fit=crop',
+    image: sprayGunImg,
   },
   {
     id: 'polishing-compound',
     name: 'Polishing Compound',
-    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop',
+    image: polishingCompoundImg,
   },
   {
     id: 'filters',
     name: 'Filters',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
+    image: filtersImg,
   },
   {
     id: 'paint-booth-chemicals',
     name: 'Paint Booth Chemicals',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop',
+    image: paintBoothChemicalsImg,
   },
   {
     id: 'pneumatic-tools',
     name: 'Pneumatic Tools',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=400&fit=crop',
+    image: pneumaticToolsImg,
   },
   {
     id: 'fabrics',
     name: 'Industrial Fabrics',
-    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=400&fit=crop',
+    image: fabricsImg,
   },
   {
     id: 'consumables',
     name: 'Industrial Consumables',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop',
+    image: consumablesImg,
   },
   {
     id: 'safety',
     name: 'Safety Products',
-    image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&h=400&fit=crop',
+    image: safetyImg,
   },
   {
     id: 'cleanroom-products',
     name: 'Cleanroom Products',
-    image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&h=400&fit=crop',
+    image: cleanroomProductsImg,
   },
 ];
 
