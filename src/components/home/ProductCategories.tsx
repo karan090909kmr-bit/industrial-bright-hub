@@ -1,111 +1,80 @@
 import { Link } from 'react-router-dom';
-import { Disc, ScrollText, HardHat, Package, Shirt, Factory, ArrowRight, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield } from 'lucide-react';
 
 const categories = [
   {
     id: 'abrasives',
     name: 'Abrasives',
-    description: 'Sandpapers, sanding discs, grinding belts, flap discs, and PSA/Rolloc discs.',
-    icon: Disc,
-    color: 'bg-red-500/10 text-red-600',
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop',
   },
   {
     id: 'tapes',
     name: 'Self Adhesive Tapes',
-    description: 'Packaging, masking, double-sided, floor marking, and specialty industrial tapes.',
-    icon: ScrollText,
-    color: 'bg-green-500/10 text-green-600',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
   },
   {
     id: 'workwear',
     name: 'Workwear',
-    description: 'Lint-free garments, ESD clothing, lab coats, coveralls, and corporate uniforms.',
-    icon: Shirt,
-    color: 'bg-blue-500/10 text-blue-600',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
   },
   {
     id: 'polishing-pads',
     name: 'Polishing Pads',
-    description: 'High-quality orange foam pads and natural wool buffing pads for surface finishing.',
-    icon: CircleDot,
-    color: 'bg-orange-500/10 text-orange-600',
+    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=400&fit=crop',
   },
   {
     id: 'wipes',
     name: 'Wipes',
-    description: 'Industrial microfibre, non-woven, and lint-free wipes for cleaning and preparation.',
-    icon: ScrollText,
-    color: 'bg-blue-500/10 text-blue-600',
+    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=400&fit=crop',
   },
   {
     id: 'backup-pad',
     name: 'Backup Pad',
-    description: 'Velcro, PSA, and Sumo backup pads with sanding blocks for polishing applications.',
-    icon: Disc,
-    color: 'bg-indigo-500/10 text-indigo-600',
+    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=400&fit=crop',
   },
   {
     id: 'spray-gun',
     name: 'Spray Gun',
-    description: 'Paint spray guns, conventional guns, paint cup guns, and airless gun systems.',
-    icon: Paintbrush,
-    color: 'bg-sky-500/10 text-sky-600',
+    image: 'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=600&h=400&fit=crop',
   },
   {
     id: 'polishing-compound',
     name: 'Polishing Compound',
-    description: 'Heavy cut, medium cut, finishing compounds, and all-in-one polishing solutions.',
-    icon: Sparkles,
-    color: 'bg-pink-500/10 text-pink-600',
+    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop',
   },
   {
     id: 'filters',
     name: 'Filters',
-    description: 'Pocket, pre, oven, nylon mesh, cartridge, bag, and paint booth ceiling filters.',
-    icon: Wind,
-    color: 'bg-cyan-500/10 text-cyan-600',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
   },
   {
     id: 'paint-booth-chemicals',
     name: 'Paint Booth Chemicals',
-    description: 'Paint denaturant, tacky coat, oven coat, and tacky peeable chemicals.',
-    icon: Factory,
-    color: 'bg-emerald-500/10 text-emerald-600',
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop',
   },
   {
     id: 'pneumatic-tools',
     name: 'Pneumatic Tools',
-    description: 'Angle polishers, sanders, die grinders, and pop-rivet guns for industrial use.',
-    icon: Wrench,
-    color: 'bg-slate-500/10 text-slate-600',
+    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=400&fit=crop',
   },
   {
     id: 'fabrics',
     name: 'Industrial Fabrics',
-    description: 'Cotton waste, protective, woven, and polyester fabrics for industrial applications.',
-    icon: Factory,
-    color: 'bg-purple-500/10 text-purple-600',
+    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=400&fit=crop',
   },
   {
     id: 'consumables',
     name: 'Industrial Consumables',
-    description: 'Industrial lubricants, cleaning supplies, and maintenance materials.',
-    icon: Package,
-    color: 'bg-teal-500/10 text-teal-600',
+    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop',
   },
   {
     id: 'safety',
     name: 'Safety Products',
-    description: 'Helmets, goggles, gloves, respiratory protection, and safety footwear.',
-    icon: HardHat,
-    color: 'bg-amber-500/10 text-amber-600',
+    image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&h=400&fit=crop',
   },
   {
     id: 'cleanroom-products',
     name: 'Cleanroom Products',
-    description: 'Sticky mats, ESD shoes, and ESD slippers for contamination control.',
-    icon: Shield,
-    color: 'bg-violet-500/10 text-violet-600',
+    image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&h=400&fit=crop',
   },
 ];
 
@@ -133,24 +102,28 @@ export function ProductCategories() {
             <Link
               key={category.id}
               to={`/products#${category.id}`}
-              className="card-industrial group p-8 animate-fade-up"
+              className="group relative overflow-hidden rounded-lg aspect-[4/3] animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`w-14 h-14 rounded-xl ${category.color} flex items-center justify-center mb-6 transition-transform group-hover:scale-110`}>
-                <category.icon className="h-7 w-7" />
-              </div>
+              {/* Background image */}
+              <img
+                src={category.image}
+                alt={category.name}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
               
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {category.name}
-              </h3>
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300" />
               
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                {category.description}
-              </p>
-              
-              <div className="flex items-center gap-2 text-primary font-medium text-sm">
-                <span>View Products</span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-4 drop-shadow-lg">
+                  {category.name}
+                </h3>
+                
+                <span className="inline-block px-6 py-2 border-2 border-white text-white text-sm font-medium transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                  View Products
+                </span>
               </div>
             </Link>
           ))}
