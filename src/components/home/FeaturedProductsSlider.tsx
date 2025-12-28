@@ -59,8 +59,6 @@ export const FeaturedProductsSlider = () => {
                   <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <Link
                       to={`/featured/${product.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="relative aspect-square overflow-hidden cursor-pointer group"
                     >
                       <img
@@ -72,8 +70,6 @@ export const FeaturedProductsSlider = () => {
                     <div className="p-4 flex flex-col flex-1">
                       <Link
                         to={`/featured/${product.id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="text-lg font-semibold text-foreground hover:text-primary transition-colors text-left mb-3"
                       >
                         {product.name}
@@ -85,11 +81,7 @@ export const FeaturedProductsSlider = () => {
                           className="w-full"
                           asChild
                         >
-                          <Link
-                            to={`/featured/${product.id}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <Link to={`/featured/${product.id}`}>
                             View Description
                           </Link>
                         </Button>
