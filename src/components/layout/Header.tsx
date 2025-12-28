@@ -56,7 +56,7 @@ export function Header() {
             />
             <Button 
               type="submit" 
-              className="rounded-l-none bg-destructive hover:bg-destructive/90 text-white px-6"
+              className="rounded-l-none bg-accent hover:bg-accent/90 text-accent-foreground px-6"
             >
               <Search className="h-5 w-5" />
             </Button>
