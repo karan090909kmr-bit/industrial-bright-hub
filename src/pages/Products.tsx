@@ -1,10 +1,24 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { categories } from '@/data/categories';
+import { useMemo } from 'react';
 
 const Products = () => {
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get('search')?.toLowerCase() || '';
+
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery) return categories;
+    
+    return categories.filter(category => {
+      const nameMatch = category.name.toLowerCase().includes(searchQuery);
+      const descMatch = category.description.toLowerCase().includes(searchQuery);
+      const featureMatch = category.features.some(f => f.toLowerCase().includes(searchQuery));
+      return nameMatch || descMatch || featureMatch;
+    });
+  }, [searchQuery]);
   return (
     <Layout>
       {/* Hero Section */}
@@ -23,8 +37,16 @@ const Products = () => {
       {/* Products Grid */}
       <section className="section-padding bg-background">
         <div className="container-custom mx-auto">
+          {searchQuery && (
+            <div className="mb-8">
+              <p className="text-muted-foreground">
+                Showing results for "<span className="text-foreground font-medium">{searchQuery}</span>"
+                {filteredCategories.length === 0 && ' - No products found'}
+              </p>
+            </div>
+          )}
           <div className="space-y-16">
-            {categories.map((category, index) => (
+            {filteredCategories.map((category, index) => (
               <div
                 key={category.id}
                 id={category.id}
