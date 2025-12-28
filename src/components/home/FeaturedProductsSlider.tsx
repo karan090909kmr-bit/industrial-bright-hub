@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Carousel,
   CarouselContent,
@@ -13,13 +14,6 @@ import { featuredProducts } from '@/data/featuredProducts';
 export const FeaturedProductsSlider = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [isPaused, setIsPaused] = useState(false);
-
-  const scrollToProduct = (productId: string) => {
-    const element = document.getElementById(productId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const autoPlay = useCallback(() => {
     if (!api || isPaused) return;
@@ -63,8 +57,10 @@ export const FeaturedProductsSlider = () => {
                   className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                 >
                   <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
-                    <button
-                      onClick={() => scrollToProduct(product.id)}
+                    <Link
+                      to={`/featured/${product.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="relative aspect-square overflow-hidden cursor-pointer group"
                     >
                       <img
@@ -72,22 +68,30 @@ export const FeaturedProductsSlider = () => {
                         alt={product.name}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
-                    </button>
+                    </Link>
                     <div className="p-4 flex flex-col flex-1">
-                      <button
-                        onClick={() => scrollToProduct(product.id)}
+                      <Link
+                        to={`/featured/${product.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-lg font-semibold text-foreground hover:text-primary transition-colors text-left mb-3"
                       >
                         {product.name}
-                      </button>
+                      </Link>
                       <div className="mt-auto">
                         <Button
                           variant="outline"
                           size="sm"
-                          onClick={() => scrollToProduct(product.id)}
                           className="w-full"
+                          asChild
                         >
-                          View Description
+                          <Link
+                            to={`/featured/${product.id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            View Description
+                          </Link>
                         </Button>
                       </div>
                     </div>
