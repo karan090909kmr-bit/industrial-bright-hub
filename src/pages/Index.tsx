@@ -1,13 +1,15 @@
 import { Layout } from '@/components/layout/Layout';
-import { FeaturedProducts } from '@/components/home/FeaturedProducts';
-import { ProductDescriptions } from '@/components/home/ProductDescriptions';
+import { HeroSection } from '@/components/home/HeroSection';
+import { ProductCategories } from '@/components/home/ProductCategories';
+import { WhyChooseUs } from '@/components/home/WhyChooseUs';
 import { CTASection } from '@/components/home/CTASection';
 
 const Index = () => {
   return (
     <Layout>
-      <FeaturedProducts />
-      <ProductDescriptions />
+      <HeroSection />
+      <ProductCategories />
+      <WhyChooseUs />
       <CTASection />
     </Layout>
   );
