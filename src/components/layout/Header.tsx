@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X, Phone, Mail, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -12,7 +13,17 @@ const navigation = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/products?search=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
@@ -29,6 +40,27 @@ export function Header() {
               <span>info@industrialsupply.com</span>
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* Search Bar */}
+      <div className="bg-primary border-b border-primary/80">
+        <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <form onSubmit={handleSearch} className="flex max-w-2xl mx-auto">
+            <Input
+              type="text"
+              placeholder="Search for more..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="flex-1 rounded-r-none border-r-0 bg-white text-foreground placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
+            />
+            <Button 
+              type="submit" 
+              className="rounded-l-none bg-destructive hover:bg-destructive/90 text-white px-6"
+            >
+              <Search className="h-5 w-5" />
+            </Button>
+          </form>
         </div>
       </div>
 
