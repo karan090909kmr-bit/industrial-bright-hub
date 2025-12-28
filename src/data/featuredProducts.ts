@@ -21,7 +21,7 @@ export interface FeaturedProduct {
 export const featuredProducts: FeaturedProduct[] = [
   {
     id: 'lint-free-coverall-apron',
-    name: 'Lint Free Coverall Apron',
+    name: 'Lint Free Coverall & Apron',
     image: lintFreeCoverallApron,
     description: 'Low-linting coveralls specifically designed for cleanroom and controlled environments. Made from tightly woven synthetic fabric that minimizes particle shedding while providing comfort during extended wear.',
     specifications: [
