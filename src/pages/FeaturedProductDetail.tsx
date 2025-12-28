@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -7,7 +7,12 @@ import { ArrowLeft, CheckCircle, MessageSquareQuote } from 'lucide-react';
 
 const FeaturedProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
+  const navigate = useNavigate();
   const product = featuredProducts.find(p => p.id === productId);
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
 
   if (!product) {
     return <Navigate to="/" replace />;
@@ -18,13 +23,13 @@ const FeaturedProductDetail = () => {
       {/* Breadcrumb */}
       <section className="bg-muted/30 py-4 border-b border-border">
         <div className="container mx-auto px-4">
-          <Link 
-            to="/" 
+          <button 
+            onClick={handleGoBack}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Home
-          </Link>
+            Back
+          </button>
         </div>
       </section>
 
@@ -100,12 +105,14 @@ const FeaturedProductDetail = () => {
 
                 {/* Get a Quote Button */}
                 <div className="mt-auto pt-4 border-t border-border">
-                  <Link to={`/contact?product=${encodeURIComponent(product.name)}`}>
-                    <Button size="lg" className="w-full sm:w-auto gap-2">
-                      <MessageSquareQuote className="w-5 h-5" />
-                      Get a Quote for {product.name}
-                    </Button>
-                  </Link>
+                  <Button 
+                    size="lg" 
+                    className="w-full sm:w-auto gap-2"
+                    onClick={() => navigate(`/contact?product=${encodeURIComponent(product.name)}`)}
+                  >
+                    <MessageSquareQuote className="w-5 h-5" />
+                    Get a Quote for {product.name}
+                  </Button>
                 </div>
               </div>
             </div>
