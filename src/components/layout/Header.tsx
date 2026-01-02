@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone, Mail, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import taqiraLogo from '@/assets/taqira-logo.jpg';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -68,14 +69,12 @@ export function Header() {
       <nav className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">IS</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-display font-bold text-xl text-foreground">Industrial</span>
-              <span className="font-display font-bold text-xl text-primary"> Supply</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={taqiraLogo} 
+              alt="Taqira Logo" 
+              className="h-10 sm:h-12 w-auto rounded-lg"
+            />
           </Link>
 
           {/* Desktop navigation */}
