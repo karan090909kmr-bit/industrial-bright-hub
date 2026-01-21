@@ -1,6 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
 import { HeroSection } from '@/components/home/HeroSection';
-import { ProductsIncludeSection } from '@/components/home/ProductsIncludeSection';
 import { FeaturedProductsSlider } from '@/components/home/FeaturedProductsSlider';
 import { ProductCategories } from '@/components/home/ProductCategories';
 import { WhyChooseUs } from '@/components/home/WhyChooseUs';
@@ -10,7 +9,6 @@ const Index = () => {
   return (
     <Layout>
       <HeroSection />
-      <ProductsIncludeSection />
       <FeaturedProductsSlider />
       <ProductCategories />
       <WhyChooseUs />
