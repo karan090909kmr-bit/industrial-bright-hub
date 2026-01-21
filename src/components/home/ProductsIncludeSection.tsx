@@ -1,82 +1,137 @@
 import { Link } from 'react-router-dom';
-
-// Import product images
-import abrasivesImg from '@/assets/categories/abrasives.jpg';
-import tapesImg from '@/assets/categories/tapes.jpg';
-import workwearImg from '@/assets/categories/workwear.jpg';
-import polishingPadsImg from '@/assets/categories/polishing-pads.jpg';
-import wipesImg from '@/assets/categories/wipes.jpg';
-import backupPadImg from '@/assets/categories/backup-pad.jpg';
-import sprayGunImg from '@/assets/categories/spray-gun.jpg';
-import polishingCompoundImg from '@/assets/categories/polishing-compound.jpg';
-import filtersImg from '@/assets/categories/filters.jpg';
-import paintBoothChemicalsImg from '@/assets/categories/paint-booth-chemicals.jpg';
-import pneumaticToolsImg from '@/assets/categories/pneumatic-tools.jpg';
-import fabricsImg from '@/assets/categories/fabrics.jpg';
-import consumablesImg from '@/assets/categories/consumables.jpg';
-import safetyImg from '@/assets/categories/safety.jpg';
-import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
-import tackClothImg from '@/assets/categories/tack-cloth.jpg';
-import handProtectionImg from '@/assets/categories/hand-protection.jpg';
-
-interface ProductItem {
-  id: string;
-  name: string;
-  image: string;
-}
-
-const productItems: ProductItem[] = [
-  { id: 'abrasives', name: 'Abrasives & Sanding Materials', image: abrasivesImg },
-  { id: 'tapes', name: 'Self Adhesive Tapes', image: tapesImg },
-  { id: 'workwear', name: 'Workwear & Uniforms', image: workwearImg },
-  { id: 'polishing-pads', name: 'Polishing Pads', image: polishingPadsImg },
-  { id: 'wipes', name: 'Industrial Wipes', image: wipesImg },
-  { id: 'backup-pad', name: 'Backup Pads', image: backupPadImg },
-  { id: 'spray-gun', name: 'Spray Guns', image: sprayGunImg },
-  { id: 'polishing-compound', name: 'Polishing Compounds', image: polishingCompoundImg },
-  { id: 'filters', name: 'Industrial Filters', image: filtersImg },
-  { id: 'paint-booth-chemicals', name: 'Paint Booth Chemicals', image: paintBoothChemicalsImg },
-  { id: 'pneumatic-tools', name: 'Pneumatic Tools', image: pneumaticToolsImg },
-  { id: 'fabrics', name: 'Industrial Fabrics', image: fabricsImg },
-  { id: 'consumables', name: 'Industrial Consumables', image: consumablesImg },
-  { id: 'safety', name: 'Safety Products & PPE', image: safetyImg },
-  { id: 'cleanroom-products', name: 'Cleanroom Products', image: cleanroomProductsImg },
-  { id: 'tack-cloth', name: 'Tack Cloths', image: tackClothImg },
-  { id: 'hand-protection', name: 'Hand Protection', image: handProtectionImg },
-];
+import { Check, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { categories } from '@/data/categories';
+import { Button } from '@/components/ui/button';
 
 export const ProductsIncludeSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentCategory = categories[currentIndex];
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? categories.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === categories.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Products Include
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive range of industrial supplies for automotive, manufacturing, and cleanroom applications
-          </p>
+        <div className="bg-muted/30 rounded-2xl border border-border/50 shadow-sm overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            {/* Left: Category Image Card */}
+            <div className="relative h-64 lg:h-auto lg:min-h-[400px]">
+              <img
+                src={currentCategory.image}
+                alt={currentCategory.name}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              
+              {/* Navigation Dots */}
+              <button
+                onClick={handlePrev}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                aria-label="Previous category"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                aria-label="Next category"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+
+              {/* Category Indicator */}
+              <div className="absolute left-6 top-6">
+                <div className="w-8 h-8 rounded-full border-2 border-primary bg-primary/20 flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-primary" />
+                </div>
+              </div>
+
+              {/* Category Info */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
+                  {currentCategory.name}
+                </h3>
+                <p className="text-white/80 text-sm md:text-base line-clamp-2">
+                  {currentCategory.description}
+                </p>
+              </div>
+
+              {/* Pagination Dots */}
+              <div className="absolute bottom-6 right-6 flex gap-1.5">
+                {categories.slice(0, 5).map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      idx === currentIndex ? 'bg-primary' : 'bg-white/50'
+                    }`}
+                    aria-label={`Go to category ${idx + 1}`}
+                  />
+                ))}
+                {categories.length > 5 && (
+                  <span className="text-white/50 text-xs ml-1">+{categories.length - 5}</span>
+                )}
+              </div>
+            </div>
+
+            {/* Right: Products Include List */}
+            <div className="p-6 lg:p-8">
+              <div className="flex items-center justify-between mb-6">
+                <h4 className="text-xl font-display font-semibold text-foreground">
+                  Products Include:
+                </h4>
+                <Link to={`/products/${currentCategory.id}`}>
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    View All
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                {currentCategory.features.slice(0, 8).map((feature, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-primary" />
+                    </div>
+                    <span className="text-muted-foreground text-sm leading-relaxed">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {currentCategory.features.length > 8 && (
+                <p className="text-muted-foreground text-sm mt-4">
+                  +{currentCategory.features.length - 8} more products
+                </p>
+              )}
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-          {productItems.map((item) => (
-            <Link
-              key={item.id}
-              to={`/products/${item.id}`}
-              className="group flex items-center gap-4 p-3 bg-background rounded-lg border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-200"
+        {/* Category Quick Nav */}
+        <div className="flex justify-center mt-6 gap-2 flex-wrap">
+          {categories.map((cat, idx) => (
+            <button
+              key={cat.id}
+              onClick={() => setCurrentIndex(idx)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                idx === currentIndex
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
+              }`}
             >
-              <div className="w-20 h-20 flex-shrink-0 rounded-md overflow-hidden bg-muted">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
-                  loading="lazy"
-                />
-              </div>
-              <span className="text-foreground font-medium group-hover:text-primary transition-colors">
-                {item.name}
-              </span>
-            </Link>
+              {cat.name}
+            </button>
           ))}
         </div>
       </div>
