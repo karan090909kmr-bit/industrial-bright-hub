@@ -12,24 +12,24 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: '+1 (234) 567-890',
-    link: 'tel:+1234567890',
+    details: '+91 97520 97656',
+    link: 'tel:+919752097656',
   },
   {
     icon: Mail,
     title: 'Email',
-    details: 'info@industrialsupply.com',
-    link: 'mailto:info@industrialsupply.com',
+    details: 'info.civadale@gmail.com',
+    link: 'mailto:info.civadale@gmail.com',
   },
   {
     icon: MapPin,
     title: 'Address',
-    details: '123 Industrial Blvd, Suite 100\nManufacturing City, MC 12345',
+    details: 'Patna - 800008\nBihar, India',
   },
   {
     icon: Clock,
     title: 'Business Hours',
-    details: 'Mon - Fri: 8:00 AM - 6:00 PM\nSat: 9:00 AM - 2:00 PM',
+    details: 'Mon - Sat: 9:00 AM - 6:00 PM',
   },
 ];
 

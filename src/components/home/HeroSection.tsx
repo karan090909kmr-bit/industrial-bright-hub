@@ -24,16 +24,16 @@ export function HeroSection() {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              Manufacturers & Suppliers of Custom Workwear
+              TAQIRA - Quality You Can Trust
             </div>
             
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-              Premium Industrial Consumables,
-              <span className="block text-accent">Fabric Materials & Custom Workwear</span>
+              Industrial Workwear &
+              <span className="block text-accent">Quality Industrial Consumables</span>
             </h1>
             
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              Equip your business with high-quality industrial consumables, safety wear, and customized fabric products—manufactured to meet your exact requirements with reliable quality and competitive pricing.
+              Civadale Enterprise delivers quality-driven industrial workwear, ESD products, abrasives, safety equipment, and consumables—designed for safety, durability, and performance in modern industrial environments.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-up" style={{ animationDelay: '0.3s' }}>

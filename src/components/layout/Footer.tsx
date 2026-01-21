@@ -35,17 +35,14 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">IS</span>
-              </div>
               <div>
-                <span className="font-display font-bold text-xl">Industrial</span>
-                <span className="font-display font-bold text-xl text-accent"> Supply</span>
+                <span className="font-display font-bold text-2xl">TAQIRA</span>
+                <p className="text-primary-foreground/60 text-xs">Quality You Can Trust...</p>
               </div>
             </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              Manufacturers & suppliers of coveralls, lab coats, scrub suits, corporate uniforms, 
-              industrial consumables, and fabric solutions.
+            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
+              <strong>Civadale Enterprise</strong> - Manufacturers & suppliers of industrial workwear, 
+              ESD products, abrasives, safety equipment, and industrial consumables.
             </p>
           </div>
 
@@ -90,32 +87,32 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/80 text-sm">
-                  123 Industrial Blvd, Suite 100<br />
-                  Manufacturing City, MC 12345
+                  Patna - 800008<br />
+                  Bihar, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-accent shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+919752097656"
                   className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                 >
-                  +1 (234) 567-890
+                  +91 97520 97656
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent shrink-0" />
                 <a
-                  href="mailto:info@industrialsupply.com"
+                  href="mailto:info.civadale@gmail.com"
                   className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
                 >
-                  info@industrialsupply.com
+                  info.civadale@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="h-5 w-5 text-accent shrink-0" />
                 <span className="text-primary-foreground/80 text-sm">
-                  Mon - Fri: 8:00 AM - 6:00 PM
+                  Mon - Sat: 9:00 AM - 6:00 PM
                 </span>
               </li>
             </ul>
@@ -126,7 +123,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-primary-foreground/60 text-sm">
-              © {new Date().getFullYear()} Industrial Supply Co. All rights reserved.
+              © {new Date().getFullYear()} Civadale Enterprise. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link to="/privacy" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">

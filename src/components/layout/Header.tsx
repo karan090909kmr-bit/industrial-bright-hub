@@ -32,13 +32,13 @@ export function Header() {
       <div className="hidden lg:block bg-primary text-primary-foreground">
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-end gap-6 py-2 text-sm">
-            <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="tel:+919752097656" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>+1 (234) 567-890</span>
+              <span>+91 97520 97656</span>
             </a>
-            <a href="mailto:info@industrialsupply.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:info.civadale@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
-              <span>info@industrialsupply.com</span>
+              <span>info.civadale@gmail.com</span>
             </a>
           </div>
         </div>
