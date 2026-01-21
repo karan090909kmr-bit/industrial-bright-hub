@@ -1,23 +1,38 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Target, Eye, Users, Award, CheckCircle, ArrowRight } from 'lucide-react';
+import { Target, Eye, Users, Award, CheckCircle, ArrowRight, Shield, Cog, Handshake, Star } from 'lucide-react';
 
 const values = [
   {
+    icon: Shield,
+    title: 'Safety by Design',
+    description: 'Engineered protection for demanding industrial environments.',
+  },
+  {
+    icon: Cog,
+    title: 'Performance Engineered',
+    description: 'High-performance products built for real-world industrial use.',
+  },
+  {
     icon: CheckCircle,
-    title: 'Quality First',
-    description: 'We never compromise on the quality of our products, ensuring every item meets rigorous standards.',
+    title: 'Uncompromised Quality',
+    description: 'Precision manufacturing with certified, trusted sourcing.',
   },
   {
     icon: Users,
-    title: 'Customer Focus',
-    description: 'Your success is our priority. We work closely with clients to understand and meet their needs.',
+    title: 'Customer-Centric Solutions',
+    description: 'Application-driven solutions aligned to operational needs.',
   },
   {
-    icon: Award,
-    title: 'Integrity',
-    description: 'Honest dealings and transparent practices form the foundation of all our business relationships.',
+    icon: Handshake,
+    title: 'Enduring Partnerships',
+    description: 'Long-term relationships built on trust and reliability.',
+  },
+  {
+    icon: Star,
+    title: 'Industrial Leadership',
+    description: 'TAQIRA - A brand defined by quality, performance, and credibility.',
   },
 ];
 
@@ -28,11 +43,11 @@ const About = () => {
       <section className="bg-primary py-20 lg:py-28">
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-            About Our Company
+            About Civadale Enterprise
           </h1>
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            Manufacturers & suppliers of premium industrial consumables, custom workwear, 
-            and fabric solutions designed to meet your exact requirements.
+          <p className="text-primary-foreground/80 text-lg max-w-3xl mx-auto">
+            A professionally managed organization engaged in manufacturing industrial workwear 
+            and trading industrial consumables under our brand TAQIRA.
           </p>
         </div>
       </section>
@@ -43,26 +58,27 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
-                Our Story
+                About Us
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Manufacturing Excellence & Quality Supply
+                Quality You Can Trust
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  We are dedicated manufacturers and suppliers specializing in industrial 
-                  consumables, fabric materials, and custom workwear solutions. Our mission 
-                  is to provide businesses with high-quality products at competitive prices.
+                  <strong className="text-foreground">Civadale Enterprise</strong> is a professionally managed organization 
+                  engaged in the manufacturing of industrial workwear and trading of industrial consumables, 
+                  serving a wide range of industries with reliable, quality-driven solutions.
                 </p>
                 <p>
-                  From coveralls and lab coats to scrub suits and corporate uniforms, we 
-                  manufacture custom workwear tailored to your exact specifications. Our 
-                  industrial fabric solutions serve diverse industries with reliable quality.
+                  Under our brand <strong className="text-primary">TAQIRA</strong>, we focus on delivering products that meet the practical 
+                  demands of modern industrial environments—where safety, durability, and performance are critical. 
+                  Our offerings are designed to support efficient operations while maintaining compliance with industry standards.
                 </p>
                 <p>
-                  We also supply a comprehensive range of industrial consumables including 
-                  abrasives, self adhesive tapes, safety products, and essential supplies 
-                  that keep your operations running smoothly.
+                  With a customer-centric approach, Civadale Enterprise combines quality manufacturing, 
+                  trusted sourcing, and responsive service to ensure consistent value for our clients. 
+                  We continuously strive to build long-term relationships by understanding customer needs 
+                  and providing dependable solutions tailored to their requirements.
                 </p>
               </div>
             </div>
@@ -103,9 +119,9 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the most reliable manufacturer and supplier of industrial consumables 
-                and custom workwear, delivering exceptional quality, competitive pricing, 
-                and products manufactured to meet your exact requirements.
+                To be the most reliable manufacturer and supplier of industrial workwear and consumables, 
+                delivering products that meet the practical demands of modern industrial environments 
+                with safety, durability, and performance at the core.
               </p>
             </div>
             
@@ -115,9 +131,9 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To become the leading industrial supply partner recognized for custom 
-                manufacturing excellence, quality fabric solutions, and an unwavering 
-                commitment to customer success across all industries we serve.
+                To become the leading industrial supply partner recognized for quality manufacturing, 
+                trusted sourcing, and responsive service—building long-term relationships through 
+                dependable solutions tailored to customer requirements.
               </p>
             </div>
           </div>
@@ -132,11 +148,14 @@ const About = () => {
               Our Values
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              The Principles That Guide Us
+              What Makes TAQIRA Different
             </h2>
+            <p className="text-muted-foreground">
+              TAQIRA represents our commitment to quality, trust, and industrial excellence.
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div 
                 key={index}
@@ -165,7 +184,7 @@ const About = () => {
             Ready to Partner with Us?
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can support your business with quality industrial supplies and custom manufacturing.
+            Let's discuss how Civadale Enterprise can support your business with quality industrial supplies and custom manufacturing.
           </p>
           <Button variant="hero" size="xl" asChild>
             <Link to="/contact" className="flex items-center gap-2">

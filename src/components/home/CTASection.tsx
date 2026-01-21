@@ -29,7 +29,7 @@ export function CTASection() {
             </Link>
           </Button>
           <Button variant="hero-outline" size="xl" asChild>
-            <a href="tel:+1234567890" className="flex items-center gap-2">
+            <a href="tel:+919752097656" className="flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Call Us Now
             </a>
