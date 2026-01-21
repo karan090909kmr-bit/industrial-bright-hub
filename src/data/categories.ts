@@ -150,11 +150,25 @@ export const categories: Category[] = [
   {
     id: 'safety',
     name: 'Safety Products',
-    description: 'Comprehensive personal protective equipment and workplace safety solutions.',
+    description: 'Comprehensive personal protective equipment (PPE) and workplace safety solutions certified to EN & CE standards for automobile, construction, and petrochemical industries.',
     image: safetyImg,
     icon: HardHat,
     color: 'bg-amber-500/10 text-amber-600 border-amber-500/20',
-    features: ['Safety Helmets', 'Safety Glasses & Goggles', 'Gloves & Hand Protection', 'Respiratory Protection', 'High-Visibility Clothing', 'Safety Shoes', 'Toe Guard', 'Gum Boot'],
+    features: [
+      'Safety Helmets (PN501/PN521 Ratchet Type)',
+      'Safety Eyewear (Clear/Smoked Lenses)',
+      'Chemical Splash Goggles',
+      'FFP1/FFP2 Respirator Masks',
+      'Venus V4400 N95 Masks',
+      '3-Ply Surgical Masks',
+      'Safety Shoes (Low/High Ankle)',
+      'Ladies Safety Shoes',
+      'Full Body Harness (Karam PN18/PN56)',
+      'Work Positioning Lanyards',
+      'Welding Face Shields',
+      'Toe Guard',
+      'Gum Boot'
+    ],
   },
   {
     id: 'cleanroom-products',
@@ -177,11 +191,26 @@ export const categories: Category[] = [
   {
     id: 'hand-protection',
     name: 'Hand Protection',
-    description: 'Industrial-grade hand protection solutions including safety gloves, cut-resistant gloves, and specialized work gloves for various applications.',
+    description: 'Industrial-grade hand protection solutions including safety gloves, cut-resistant gloves, and specialized work gloves certified to EN & CE standards for various applications.',
     image: handProtectionImg,
     icon: Hand,
     color: 'bg-orange-500/10 text-orange-600 border-orange-500/20',
-    features: ['Nitrile Gloves', 'Latex Gloves', 'Cut-Resistant Gloves', 'Leather Work Gloves', 'PVC Coated Gloves', 'Rubber Gloves', 'ESD Gloves', 'Heat Resistant Gloves'],
+    features: [
+      'Double Deep Nitrile Gloves',
+      'Full Nitrile Dipped with Canvas Cuff',
+      'Black/Orange/Grey Nitrile Coated Gloves',
+      'Latex Palm Coated Gloves (Sky Blue, Yellow Green, Red)',
+      'Cut Level 5 PU Coated Gloves (Udyogi HPU5)',
+      'Cut Level 2 Hand Gloves',
+      'Para Aramid Heat Resistant Gloves',
+      'Impact Resistance Gloves with Thumb Crotch',
+      'ESD Anti-Static Dotted Gloves',
+      'ESD Palm Coated Gloves',
+      '7/10/13 Gauge Cotton Knitted Gloves',
+      'Nylon Polyester Knitted Gloves',
+      'PU Top Coated Gloves',
+      'Nitrile Examination Gloves'
+    ],
   },
 ];
 
