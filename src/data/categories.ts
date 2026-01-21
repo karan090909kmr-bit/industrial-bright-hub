@@ -1,4 +1,4 @@
-import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers, Hand } from 'lucide-react';
 
 // Import category images
 import abrasivesImg from '@/assets/categories/abrasives.jpg';
@@ -17,6 +17,7 @@ import consumablesImg from '@/assets/categories/consumables.jpg';
 import safetyImg from '@/assets/categories/safety.jpg';
 import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
 import tackClothImg from '@/assets/categories/tack-cloth.jpg';
+import handProtectionImg from '@/assets/categories/hand-protection.jpg';
 
 export interface Category {
   id: string;
@@ -172,6 +173,15 @@ export const categories: Category[] = [
     icon: Layers,
     color: 'bg-yellow-500/10 text-yellow-600 border-yellow-500/20',
     features: ['Lint Free Tack Rag', 'Cotton Tack Rag'],
+  },
+  {
+    id: 'hand-protection',
+    name: 'Hand Protection',
+    description: 'Industrial-grade hand protection solutions including safety gloves, cut-resistant gloves, and specialized work gloves for various applications.',
+    image: handProtectionImg,
+    icon: Hand,
+    color: 'bg-orange-500/10 text-orange-600 border-orange-500/20',
+    features: ['Nitrile Gloves', 'Latex Gloves', 'Cut-Resistant Gloves', 'Leather Work Gloves', 'PVC Coated Gloves', 'Rubber Gloves', 'ESD Gloves', 'Heat Resistant Gloves'],
   },
 ];
 
