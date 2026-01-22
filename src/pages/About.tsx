@@ -127,7 +127,7 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                <strong className="text-foreground">Civadale Enterprise</strong> is a professionally managed organization 
+                <strong className="text-foreground uppercase">Civadale Enterprise</strong> is a professionally managed organization 
                 engaged in the manufacturing of industrial workwear and trading of industrial consumables, 
                 serving a wide range of industries with reliable, quality-driven solutions.
               </p>
