@@ -59,19 +59,24 @@ const ProductDetail = () => {
                 Available Products
               </h2>
               <div className="space-y-3">
-                {category.features.map((feature, idx) => (
+                {category.products.map((product, idx) => (
                   <Link
                     key={idx}
-                    to={`/contact?product=${encodeURIComponent(feature)}`}
-                    className="flex items-center gap-4 px-5 py-4 bg-background rounded-xl border border-border/60 hover:border-primary/40 hover:shadow-sm transition-all group"
+                    to={`/contact?product=${encodeURIComponent(product.name)}`}
+                    className="flex items-start gap-4 px-5 py-4 bg-background rounded-xl border border-border/60 hover:border-primary/40 hover:shadow-sm transition-all group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                       <CheckCircle className="h-4 w-4 text-primary" />
                     </div>
-                    <span className="text-foreground text-sm sm:text-base font-medium group-hover:text-primary transition-colors flex-1">
-                      {feature}
-                    </span>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0" />
+                    <div className="flex-1 min-w-0">
+                      <span className="text-foreground text-sm sm:text-base font-medium group-hover:text-primary transition-colors block">
+                        {product.name}
+                      </span>
+                      <p className="text-muted-foreground text-xs sm:text-sm mt-1 line-clamp-2">
+                        {product.description}
+                      </p>
+                    </div>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
                   </Link>
                 ))}
               </div>

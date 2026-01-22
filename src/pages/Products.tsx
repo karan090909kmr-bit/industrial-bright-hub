@@ -15,8 +15,8 @@ const Products = () => {
     return categories.filter(category => {
       const nameMatch = category.name.toLowerCase().includes(searchQuery);
       const descMatch = category.description.toLowerCase().includes(searchQuery);
-      const featureMatch = category.features.some(f => f.toLowerCase().includes(searchQuery));
-      return nameMatch || descMatch || featureMatch;
+      const productMatch = category.products.some(p => p.name.toLowerCase().includes(searchQuery) || p.description.toLowerCase().includes(searchQuery));
+      return nameMatch || descMatch || productMatch;
     });
   }, [searchQuery]);
   return (
@@ -90,22 +90,22 @@ const Products = () => {
                         </Button>
                       </div>
                       <div className="grid sm:grid-cols-2 gap-3">
-                        {category.features.slice(0, 8).map((feature, idx) => (
+                        {category.products.slice(0, 8).map((product, idx) => (
                           <Link
                             key={idx}
-                            to={`/contact?product=${encodeURIComponent(feature)}`}
+                            to={`/contact?product=${encodeURIComponent(product.name)}`}
                             className="flex items-center gap-3 hover:text-primary transition-colors group"
                           >
                             <CheckCircle className="h-5 w-5 text-primary shrink-0" />
-                            <span className="text-muted-foreground group-hover:text-primary transition-colors underline-offset-2 hover:underline text-sm">{feature}</span>
+                            <span className="text-muted-foreground group-hover:text-primary transition-colors underline-offset-2 hover:underline text-sm">{product.name}</span>
                           </Link>
                         ))}
-                        {category.features.length > 8 && (
+                        {category.products.length > 8 && (
                           <Link
                             to={`/products/${category.id}`}
                             className="flex items-center gap-3 text-primary font-medium"
                           >
-                            <span>+{category.features.length - 8} more products</span>
+                            <span>+{category.products.length - 8} more products</span>
                             <ArrowRight className="h-4 w-4" />
                           </Link>
                         )}
