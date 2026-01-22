@@ -50,7 +50,7 @@ const ProductDetail = () => {
       </section>
 
       {/* Products List */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-muted/30">
         <div className="container-custom mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Products */}
@@ -58,18 +58,20 @@ const ProductDetail = () => {
               <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-8">
                 Available Products
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {category.features.map((feature, idx) => (
                   <Link
                     key={idx}
                     to={`/contact?product=${encodeURIComponent(feature)}`}
-                    className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary/50 hover:shadow-md transition-all group"
+                    className="flex items-center gap-4 px-5 py-4 bg-background rounded-xl border border-border/60 hover:border-primary/40 hover:shadow-sm transition-all group"
                   >
-                    <CheckCircle className="h-6 w-6 text-primary shrink-0" />
-                    <span className="text-foreground group-hover:text-primary transition-colors flex-1">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                    </div>
+                    <span className="text-foreground text-sm sm:text-base font-medium group-hover:text-primary transition-colors flex-1">
                       {feature}
                     </span>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0" />
                   </Link>
                 ))}
               </div>
