@@ -115,8 +115,40 @@ const About = () => {
         </div>
       </section>
 
+      {/* Quality You Can Trust Section */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-custom mx-auto">
+          <div className="max-w-4xl">
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
+              About Us
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-8">
+              Quality You Can Trust
+            </h2>
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                <strong className="text-foreground">Civadale Enterprise</strong> is a professionally managed organization 
+                engaged in the manufacturing of industrial workwear and trading of industrial consumables, 
+                serving a wide range of industries with reliable, quality-driven solutions.
+              </p>
+              <p>
+                Under our brand <strong className="text-primary">TAQIRA</strong>, we focus on delivering products that meet the practical 
+                demands of modern industrial environments—where safety, durability, and performance are critical. 
+                Our offerings are designed to support efficient operations while maintaining compliance with industry standards.
+              </p>
+              <p>
+                With a customer-centric approach, Civadale Enterprise combines quality manufacturing, 
+                trusted sourcing, and responsive service to ensure consistent value for our clients. 
+                We continuously strive to build long-term relationships by understanding customer needs 
+                and providing dependable solutions tailored to their requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-background">
         <div className="container-custom mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-card rounded-xl shadow-card border border-border/50">
