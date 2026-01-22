@@ -118,7 +118,7 @@ const About = () => {
       {/* Quality You Can Trust Section */}
       <section className="section-padding bg-muted/30">
         <div className="container-custom mx-auto">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mx-auto text-center">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
               About Us
             </span>
