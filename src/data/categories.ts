@@ -1,4 +1,4 @@
-import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers, Hand } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers } from 'lucide-react';
 
 // Import category images
 import abrasivesImg from '@/assets/categories/abrasives.jpg';
@@ -17,7 +17,6 @@ import consumablesImg from '@/assets/categories/consumables.jpg';
 import safetyImg from '@/assets/categories/safety.jpg';
 import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
 import tackClothImg from '@/assets/categories/tack-cloth.jpg';
-import handProtectionImg from '@/assets/categories/hand-protection.jpg';
 
 export interface Category {
   id: string;
@@ -187,30 +186,6 @@ export const categories: Category[] = [
     icon: Layers,
     color: 'bg-yellow-500/10 text-yellow-600 border-yellow-500/20',
     features: ['Lint Free Tack Rag', 'Cotton Tack Rag'],
-  },
-  {
-    id: 'hand-protection',
-    name: 'Hand Protection',
-    description: 'Industrial-grade hand protection solutions including safety gloves, cut-resistant gloves, and specialized work gloves certified to EN & CE standards for various applications.',
-    image: handProtectionImg,
-    icon: Hand,
-    color: 'bg-orange-500/10 text-orange-600 border-orange-500/20',
-    features: [
-      'Double Deep Nitrile Gloves',
-      'Full Nitrile Dipped with Canvas Cuff',
-      'Black/Orange/Grey Nitrile Coated Gloves',
-      'Latex Palm Coated Gloves (Sky Blue, Yellow Green, Red)',
-      'Cut Level 5 PU Coated Gloves (Udyogi HPU5)',
-      'Cut Level 2 Hand Gloves',
-      'Para Aramid Heat Resistant Gloves',
-      'Impact Resistance Gloves with Thumb Crotch',
-      'ESD Anti-Static Dotted Gloves',
-      'ESD Palm Coated Gloves',
-      '7/10/13 Gauge Cotton Knitted Gloves',
-      'Nylon Polyester Knitted Gloves',
-      'PU Top Coated Gloves',
-      'Nitrile Examination Gloves'
-    ],
   },
 ];
 
