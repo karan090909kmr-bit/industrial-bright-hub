@@ -1,7 +1,8 @@
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Target, Eye, Users, Award, CheckCircle, ArrowRight, Shield, Cog, Handshake, Star } from 'lucide-react';
+import { Target, Eye, Users, CheckCircle, ArrowRight, Shield, Cog, Handshake, Star, Quote } from 'lucide-react';
+import founderPortrait from '@/assets/founder-portrait.jpg';
 
 const values = [
   {
@@ -52,58 +53,87 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Modern About Section with Portrait */}
       <section className="section-padding bg-background">
         <div className="container-custom mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
-                About Us
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Quality You Can Trust
-              </h2>
-              <div className="space-y-4 text-muted-foreground">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Portrait Image */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="relative">
+                <div className="w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={founderPortrait} 
+                    alt="Professional portrait" 
+                    className="w-full h-full object-cover grayscale"
+                  />
+                </div>
+                {/* Subtle decorative element */}
+                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/20 rounded-2xl -z-10" />
+              </div>
+            </div>
+
+            {/* About Content */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <span className="text-accent font-medium text-sm uppercase tracking-widest">
+                  The Person Behind
+                </span>
+                <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground leading-tight">
+                  Building Trust Through<br />
+                  <span className="text-primary">Consistent Quality</span>
+                </h2>
+              </div>
+
+              <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">Civadale Enterprise</strong> is a professionally managed organization 
-                  engaged in the manufacturing of industrial workwear and trading of industrial consumables, 
-                  serving a wide range of industries with reliable, quality-driven solutions.
+                  Every product we deliver reflects a commitment to thoughtful work. 
+                  With years of experience in the industrial supply sector, we understand 
+                  what businesses need—reliable solutions that perform consistently.
                 </p>
                 <p>
-                  Under our brand <strong className="text-primary">TAQIRA</strong>, we focus on delivering products that meet the practical 
-                  demands of modern industrial environments—where safety, durability, and performance are critical. 
-                  Our offerings are designed to support efficient operations while maintaining compliance with industry standards.
+                  Our approach is simple: listen carefully, source wisely, and deliver 
+                  with integrity. We believe that lasting partnerships are built on 
+                  trust, transparency, and a shared dedication to excellence.
                 </p>
                 <p>
-                  With a customer-centric approach, Civadale Enterprise combines quality manufacturing, 
-                  trusted sourcing, and responsive service to ensure consistent value for our clients. 
-                  We continuously strive to build long-term relationships by understanding customer needs 
-                  and providing dependable solutions tailored to their requirements.
+                  Behind every order is a promise—to provide products that meet the 
+                  highest standards, to respond with care, and to stand behind everything 
+                  we offer. This is not just business; it's a responsibility we take seriously.
+                </p>
+              </div>
+
+              {/* Quote */}
+              <div className="relative bg-muted/50 rounded-xl p-6 border-l-4 border-primary">
+                <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/20" />
+                <p className="text-foreground font-medium italic">
+                  "Quality is not an act, it's a habit. We aim to make every interaction 
+                  and every product a reflection of that principle."
                 </p>
               </div>
             </div>
-            
-            <div className="relative">
-              <div className="bg-muted rounded-2xl p-8 lg:p-12">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">300+</div>
-                    <div className="text-muted-foreground text-sm">Products Available</div>
-                  </div>
-                  <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">8+</div>
-                    <div className="text-muted-foreground text-sm">Years Experience</div>
-                  </div>
-                  <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">100+</div>
-                    <div className="text-muted-foreground text-sm">Happy Clients</div>
-                  </div>
-                  <div className="text-center p-6 bg-card rounded-xl shadow-card">
-                    <div className="font-display text-4xl font-bold text-primary mb-2">24/7</div>
-                    <div className="text-muted-foreground text-sm">Support Available</div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container-custom mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center p-6 bg-card rounded-xl shadow-card border border-border/50">
+              <div className="font-display text-4xl font-bold text-primary mb-2">300+</div>
+              <div className="text-muted-foreground text-sm">Products Available</div>
+            </div>
+            <div className="text-center p-6 bg-card rounded-xl shadow-card border border-border/50">
+              <div className="font-display text-4xl font-bold text-primary mb-2">8+</div>
+              <div className="text-muted-foreground text-sm">Years Experience</div>
+            </div>
+            <div className="text-center p-6 bg-card rounded-xl shadow-card border border-border/50">
+              <div className="font-display text-4xl font-bold text-primary mb-2">100+</div>
+              <div className="text-muted-foreground text-sm">Happy Clients</div>
+            </div>
+            <div className="text-center p-6 bg-card rounded-xl shadow-card border border-border/50">
+              <div className="font-display text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-muted-foreground text-sm">Support Available</div>
             </div>
           </div>
         </div>
