@@ -132,7 +132,7 @@ const About = () => {
                 serving a wide range of industries with reliable, quality-driven solutions.
               </p>
               <p>
-                Under our brand <strong className="text-primary">TAQIRA</strong>, we focus on delivering products that meet the practical 
+                Under our brand <strong className="text-accent uppercase">TAQIRA</strong>, we focus on delivering products that meet the practical 
                 demands of modern industrial environments—where safety, durability, and performance are critical. 
                 Our offerings are designed to support efficient operations while maintaining compliance with industry standards.
               </p>
