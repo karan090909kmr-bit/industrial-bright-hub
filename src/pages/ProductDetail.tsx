@@ -19,30 +19,36 @@ const ProductDetail = () => {
 
   return (
     <Layout>
+      {/* Top Navigation Bar */}
+      <section className="bg-muted/50 border-b border-border">
+        <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <Link 
+            to="/products" 
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors mb-4"
+          >
+            <ArrowLeft className="h-5 w-5" />
+            Back to Products
+          </Link>
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+            {category.name}
+          </h1>
+        </div>
+      </section>
+
       {/* Hero Section with Image */}
-      <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
+      <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
         <img
           src={category.image}
           alt={category.name}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20" />
         <div className="absolute inset-0 flex flex-col justify-end">
-          <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-            <Link 
-              to="/products" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Products
-            </Link>
-            <div className={`w-16 h-16 rounded-xl ${category.color} flex items-center justify-center mb-4 border backdrop-blur-sm`}>
-              <category.icon className="h-8 w-8" />
+          <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+            <div className={`w-14 h-14 rounded-xl ${category.color} flex items-center justify-center mb-4 border backdrop-blur-sm`}>
+              <category.icon className="h-7 w-7" />
             </div>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-              {category.name}
-            </h1>
-            <p className="text-white/80 text-lg max-w-2xl">
+            <p className="text-white/90 text-lg max-w-2xl">
               {category.description}
             </p>
           </div>
