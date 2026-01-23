@@ -80,6 +80,11 @@ export const categories: Category[] = [
       { name: 'Paint Adhesion Testing Tape', description: 'Standardized tape for cross-hatch adhesion tests per ASTM specifications.' },
       { name: 'Kapton® / Polyimide Tapes', description: 'High-temperature resistant tape for electronics, PCB masking, and soldering.' },
       { name: 'High Temperature Masking Tapes', description: 'Heat-resistant masking for powder coating and high-temp paint applications.' },
+      { name: 'Anti-Slip/Skid Tape', description: 'High-traction adhesive tape for stairs, ramps, and walkways to prevent slips and falls.' },
+      { name: 'Warning / Hazard Tape', description: 'Brightly colored tape for marking hazardous areas and safety zones in workplaces.' },
+      { name: 'Butyl Tape', description: 'Waterproof sealing tape for roofing, HVAC, and construction applications.' },
+      { name: 'Barricade Tape', description: 'Non-adhesive tape for cordoning off restricted areas and construction sites.' },
+      { name: 'Caution Tape', description: 'High-visibility tape for temporary safety barriers and area demarcation.' },
     ],
   },
   {
