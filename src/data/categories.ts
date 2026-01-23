@@ -315,6 +315,9 @@ export const categories: Category[] = [
       { name: 'Kevlar® Cut-Resistant Gloves', description: 'Aramid fiber gloves offering superior cut and heat protection for metal handling.' },
       { name: 'Disposable Gloves', description: 'Single-use nitrile, latex, or vinyl gloves for hygiene-sensitive applications.' },
       { name: 'Surgical Gloves', description: 'Sterile medical-grade gloves for surgical procedures and healthcare settings.' },
+      { name: 'Cotton Dotted Gloves', description: 'Cotton gloves with PVC dots for enhanced grip and handling of light materials.' },
+      { name: 'Polyester Dotted Gloves', description: 'Polyester gloves with dotted palm for improved grip and dexterity in assembly work.' },
+      { name: 'Nylon Dotted Gloves', description: 'Lightweight nylon gloves with PVC dots for precision handling and general purpose use.' },
     ],
   },
   {
