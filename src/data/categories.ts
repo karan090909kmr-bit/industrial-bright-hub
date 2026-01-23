@@ -1,4 +1,4 @@
-import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers, Hand } from 'lucide-react';
 
 // Import category images
 import abrasivesImg from '@/assets/categories/abrasives.jpg';
@@ -17,6 +17,7 @@ import consumablesImg from '@/assets/categories/consumables.jpg';
 import safetyImg from '@/assets/categories/safety.jpg';
 import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
 import tackClothImg from '@/assets/categories/tack-cloth.jpg';
+import safetyHandGlovesImg from '@/assets/categories/safety-hand-gloves.png';
 
 export interface Product {
   name: string;
@@ -292,6 +293,24 @@ export const categories: Category[] = [
     products: [
       { name: 'Lint Free Tack Rag', description: 'Non-woven tack cloth that captures fine dust without leaving residue.' },
       { name: 'Cotton Tack Rag', description: 'Traditional cotton gauze tack cloth with tacky resin for dust pickup.' },
+    ],
+  },
+  {
+    id: 'safety-hand-gloves',
+    name: 'Safety Hand Gloves',
+    description: 'Industrial-grade hand protection gloves for various applications including mechanical handling, chemical resistance, and precision work. Certified to EN & CE standards for maximum safety.',
+    image: safetyHandGlovesImg,
+    icon: Hand,
+    color: 'bg-lime-500/10 text-lime-600 border-lime-500/20',
+    products: [
+      { name: 'PU Coated Gloves', description: 'Lightweight polyurethane-coated gloves for precision handling and assembly work.' },
+      { name: 'Nitrile Coated Gloves', description: 'Oil-resistant gloves with excellent grip for mechanical and automotive applications.' },
+      { name: 'Latex Coated Gloves', description: 'Natural rubber coated gloves providing flexibility and abrasion resistance.' },
+      { name: 'Cut Resistant Gloves', description: 'High-performance gloves with HPPE lining for protection against cuts and slashes.' },
+      { name: 'Chemical Resistant Gloves', description: 'Heavy-duty gloves for handling acids, solvents, and hazardous chemicals.' },
+      { name: 'ESD Gloves', description: 'Anti-static gloves for electronics manufacturing and sensitive component handling.' },
+      { name: 'Cotton Knitted Gloves', description: 'Breathable cotton gloves for light-duty handling and general purpose use.' },
+      { name: 'Leather Work Gloves', description: 'Durable leather gloves for heavy-duty industrial and construction work.' },
     ],
   },
 ];
