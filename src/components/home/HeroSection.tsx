@@ -18,71 +18,70 @@ export function HeroSection() {
         }} />
       </div>
 
-      <div className="relative container-custom mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="relative container-custom mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-end">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up">
+            <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-4 animate-fade-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
               TAQIRA - Quality You Can Trust
             </div>
             
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-4 animate-fade-up" style={{ animationDelay: '0.1s' }}>
               Industrial Workwear &
               <span className="block text-accent">Quality Industrial Consumables</span>
             </h1>
             
-            <p className="text-base lg:text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-sm lg:text-base text-primary-foreground/80 mb-6 max-w-xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
               Civadale Enterprise delivers quality-driven industrial workwear, ESD products, abrasives, safety equipment, and consumables—designed for safety, durability, and performance in modern industrial environments.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <Button variant="hero" size="xl" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <Button variant="hero" size="lg" asChild>
                 <Link to="/contact" className="flex items-center gap-2">
                   Get a Quote
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="hero-outline" size="xl" asChild className="text-lg font-bold uppercase tracking-wide">
+              <Button variant="hero-outline" size="lg" asChild className="text-base font-bold uppercase tracking-wide">
                 <Link to="/products">Our Products</Link>
               </Button>
             </div>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5 animate-fade-up" style={{ animationDelay: '0.4s' }}>
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-primary-foreground/80">
-                  <feature.icon className="h-5 w-5 text-accent" />
-                  <span className="text-sm font-medium">{feature.text}</span>
+                  <feature.icon className="h-4 w-4 text-accent" />
+                  <span className="text-xs font-medium">{feature.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Stats Grid */}
-          <div className="hidden lg:block relative animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <div className="hidden lg:flex relative animate-fade-up items-end" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
               {/* Decorative circles */}
               <div className="absolute -top-8 -right-8 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
               <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-industrial-light/30 rounded-full blur-2xl" />
               
               {/* Stats cards - 2x2 grid */}
-              <div className="relative grid grid-cols-2 gap-4">
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
-                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">300+</div>
-                  <div className="text-primary-foreground/80 text-sm">Products Available</div>
+              <div className="relative grid grid-cols-2 gap-3">
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border border-primary-foreground/20">
+                  <div className="text-2xl lg:text-3xl font-display font-bold text-accent mb-0.5">300+</div>
+                  <div className="text-primary-foreground/80 text-xs">Products Available</div>
                 </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
-                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">8+</div>
-                  <div className="text-primary-foreground/80 text-sm">Years Experience</div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border border-primary-foreground/20">
+                  <div className="text-2xl lg:text-3xl font-display font-bold text-accent mb-0.5">8+</div>
+                  <div className="text-primary-foreground/80 text-xs">Years Experience</div>
                 </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
-                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">100+</div>
-                  <div className="text-primary-foreground/80 text-sm">Happy Clients</div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border border-primary-foreground/20">
+                  <div className="text-2xl lg:text-3xl font-display font-bold text-accent mb-0.5">100+</div>
+                  <div className="text-primary-foreground/80 text-xs">Happy Clients</div>
                 </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
-                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">24/7</div>
-                  <div className="text-primary-foreground/80 text-sm">Support Available</div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-4 border border-primary-foreground/20">
+                  <div className="text-2xl lg:text-3xl font-display font-bold text-accent mb-0.5">24/7</div>
+                  <div className="text-primary-foreground/80 text-xs">Support Available</div>
                 </div>
               </div>
             </div>
