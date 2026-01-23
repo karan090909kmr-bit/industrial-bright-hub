@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Truck, Award, Phone } from 'lucide-react';
+import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
 
 const features = [
   { icon: Shield, text: 'ISO-Grade Quality' },
@@ -42,7 +42,7 @@ export function HeroSection() {
               ✓ Bulk Orders Welcome · ✓ Custom Manufacturing · ✓ Quick Response in 24 Hours
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <Button variant="hero" size="lg" asChild className="text-base font-bold px-8 shadow-lg">
                 <Link to="/contact" className="flex items-center gap-2">
                   Get Bulk Pricing
@@ -52,17 +52,6 @@ export function HeroSection() {
               <Button variant="hero-outline" size="lg" asChild className="text-base font-semibold px-8">
                 <Link to="/products">Explore Products</Link>
               </Button>
-            </div>
-
-            {/* Speak to an Expert CTA */}
-            <div className="flex justify-center lg:justify-start mb-8 animate-fade-up" style={{ animationDelay: '0.35s' }}>
-              <a
-                href="tel:+919752097656"
-                className="inline-flex items-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/30 text-primary-foreground px-6 py-3 rounded-lg transition-all duration-300 font-medium"
-              >
-                <Phone className="h-4 w-4" />
-                Speak to an Expert
-              </a>
             </div>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
