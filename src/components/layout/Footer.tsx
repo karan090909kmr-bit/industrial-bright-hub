@@ -36,12 +36,18 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-5">
               <span className="font-display font-bold text-2xl">TAQIRA</span>
-              <p className="text-primary-foreground/60 text-xs mt-1">Quality You Can Trust...</p>
+              <p className="text-primary-foreground/60 text-xs mt-1">Serving Industrial Buyers Across India</p>
             </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-5">
-              <strong>Civadale Enterprise</strong> - Manufacturers & suppliers of industrial workwear, 
-              ESD products, abrasives, safety equipment, and industrial consumables.
+            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
+              <strong>Civadale Enterprise</strong> - 8+ years supplying ESD workwear, 
+              abrasives, safety equipment & industrial consumables to 100+ businesses.
             </p>
+            <div className="bg-accent/20 rounded-lg p-3 mb-4">
+              <p className="text-accent text-sm font-semibold">Need Bulk Pricing?</p>
+              <a href="/contact" className="text-primary-foreground text-sm hover:text-accent transition-colors">
+                Get a quote in 24 hours →
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}

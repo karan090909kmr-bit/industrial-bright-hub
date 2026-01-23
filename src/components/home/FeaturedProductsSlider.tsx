@@ -30,13 +30,13 @@ export const FeaturedProductsSlider = () => {
       <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-3 block">
-            Featured Products
+            Best Sellers
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
-            Premium Industrial Products
+            Popular Industrial Products
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Industrial consumables, fabric materials & custom workwear for modern businesses
+            Trusted by 100+ manufacturers. Bulk pricing available on all items.
           </p>
         </div>
 
@@ -69,6 +69,10 @@ export const FeaturedProductsSlider = () => {
                         alt={product.name}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
+                      {/* Bulk pricing badge */}
+                      <div className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-semibold px-2.5 py-1 rounded-full">
+                        Bulk Pricing
+                      </div>
                       {/* Subtle overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </Link>
@@ -87,7 +91,7 @@ export const FeaturedProductsSlider = () => {
                           asChild
                         >
                           <Link to={`/featured/${product.id}`}>
-                            View Details
+                            View Details & Pricing
                           </Link>
                         </Button>
                       </div>
@@ -99,6 +103,18 @@ export const FeaturedProductsSlider = () => {
             <CarouselPrevious className="hidden md:flex -left-3 lg:-left-5 h-10 w-10 shadow-md" />
             <CarouselNext className="hidden md:flex -right-3 lg:-right-5 h-10 w-10 shadow-md" />
           </Carousel>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-10">
+          <Link to="/contact">
+            <Button size="lg" className="font-semibold">
+              Request Bulk Quote for All Products
+            </Button>
+          </Link>
+          <p className="text-muted-foreground text-sm mt-3">
+            Get competitive rates on large orders
+          </p>
         </div>
       </div>
     </section>

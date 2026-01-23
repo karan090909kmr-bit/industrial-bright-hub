@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
 
 const features = [
-  { icon: Shield, text: 'Quality Guaranteed' },
-  { icon: Truck, text: 'Fast Delivery' },
+  { icon: Shield, text: 'ISO-Grade Quality' },
+  { icon: Truck, text: 'Pan-India Delivery' },
   { icon: Award, text: 'Custom Manufacturing' },
 ];
 
@@ -24,27 +24,33 @@ export function HeroSection() {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-up">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              TAQIRA - Quality You Can Trust
+              Serving Industrial Buyers Across India
             </div>
             
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground leading-[1.15] mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
               Industrial Workwear &
-              <span className="block text-accent mt-2">Quality Industrial Consumables</span>
+              <span className="block text-accent mt-2">Premium Consumables</span>
             </h1>
             
-            <p className="text-base lg:text-lg text-primary-foreground/85 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              Civadale Enterprise delivers quality-driven industrial workwear, ESD products, abrasives, safety equipment, and consumables—designed for safety, durability, and performance.
+            <p className="text-base lg:text-lg text-primary-foreground/85 mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              Get bulk pricing on ESD workwear, abrasives, safety equipment & industrial consumables. 
+              Trusted by 100+ manufacturers for quality, reliability & fast supply.
+            </p>
+
+            {/* Trust badge */}
+            <p className="text-sm text-accent font-medium mb-6 animate-fade-up" style={{ animationDelay: '0.25s' }}>
+              ✓ Bulk Orders Welcome · ✓ Custom Manufacturing · ✓ Quick Response in 24 Hours
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <Button variant="hero" size="lg" asChild className="text-base font-bold px-8 shadow-lg">
                 <Link to="/contact" className="flex items-center gap-2">
-                  Get a Quote
+                  Get Bulk Pricing
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild className="text-base font-semibold px-8">
-                <Link to="/products">Our Products</Link>
+                <Link to="/products">Explore Products</Link>
               </Button>
             </div>
 
@@ -69,19 +75,19 @@ export function HeroSection() {
               <div className="relative grid grid-cols-2 gap-4">
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/15 transition-colors">
                   <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">300+</div>
-                  <div className="text-primary-foreground/80 text-sm font-medium">Products Available</div>
+                  <div className="text-primary-foreground/80 text-sm font-medium">Products in Stock</div>
                 </div>
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/15 transition-colors">
                   <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">8+</div>
-                  <div className="text-primary-foreground/80 text-sm font-medium">Years Experience</div>
+                  <div className="text-primary-foreground/80 text-sm font-medium">Years Trusted</div>
                 </div>
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/15 transition-colors">
                   <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">100+</div>
-                  <div className="text-primary-foreground/80 text-sm font-medium">Happy Clients</div>
+                  <div className="text-primary-foreground/80 text-sm font-medium">Industrial Clients</div>
                 </div>
                 <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/20 hover:bg-primary-foreground/15 transition-colors">
                   <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">24/7</div>
-                  <div className="text-primary-foreground/80 text-sm font-medium">Support Available</div>
+                  <div className="text-primary-foreground/80 text-sm font-medium">Support & Enquiry</div>
                 </div>
               </div>
             </div>
