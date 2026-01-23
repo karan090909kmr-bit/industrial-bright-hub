@@ -94,10 +94,12 @@ export function Header() {
 
       {/* Main navigation */}
       <nav className="container-custom mx-auto px-4 sm:px-6 lg:px-8 bg-card">
-        <div className="flex items-center justify-between h-14 lg:h-16">
+        <div className="flex items-center justify-between h-14 lg:h-16 relative">
+          {/* Empty spacer for left side on desktop */}
+          <div className="hidden lg:block w-32" />
 
           {/* Desktop navigation - centered */}
-          <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden lg:flex items-center gap-10">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -113,9 +115,9 @@ export function Header() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Button variant="accent" size="lg" asChild>
+          {/* CTA Button - Right side */}
+          <div className="hidden lg:flex items-center">
+            <Button variant="accent" size="lg" asChild className="font-bold shadow-md">
               <Link to="/contact">Get a Quote</Link>
             </Button>
           </div>
@@ -123,7 +125,7 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground ml-auto"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
