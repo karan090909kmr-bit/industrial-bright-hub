@@ -27,66 +27,85 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
-      {/* Top bar */}
-      <div className="hidden lg:block bg-primary text-primary-foreground">
+    <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
+      {/* Top bar with contact, search, and logo */}
+      <div className="bg-primary text-primary-foreground">
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-end gap-6 py-2 text-sm">
-            <a href="tel:+919752097656" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Phone className="h-4 w-4" />
-              <span>+91 97520 97656</span>
-            </a>
-            <a href="mailto:info.civadale@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Mail className="h-4 w-4" />
-              <span>info.civadale@gmail.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
+          <div className="flex items-center justify-between py-3 gap-4">
+            {/* Logo - Left */}
+            <Link to="/" className="flex items-center shrink-0">
+              <img 
+                src={taqiraLogo} 
+                alt="Taqira Logo" 
+                className="h-12 sm:h-14 w-auto rounded-lg shadow-md"
+              />
+            </Link>
 
-      {/* Search Bar */}
-      <div className="bg-primary border-b border-primary/80">
-        <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <form onSubmit={handleSearch} className="flex max-w-2xl mx-auto">
-            <Input
-              type="text"
-              placeholder="Search for more..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 rounded-r-none border-r-0 bg-white text-foreground placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
-            />
-            <Button 
-              type="submit" 
-              className="rounded-l-none bg-accent hover:bg-accent/90 text-accent-foreground px-6"
-            >
-              <Search className="h-5 w-5" />
-            </Button>
+            {/* Search Bar - Center */}
+            <form onSubmit={handleSearch} className="hidden sm:flex flex-1 max-w-xl mx-4 lg:mx-8">
+              <Input
+                type="text"
+                placeholder="Search products, categories, materials..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="flex-1 h-11 rounded-r-none border-r-0 bg-white text-foreground placeholder:text-muted-foreground/70 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
+              />
+              <Button 
+                type="submit" 
+                className="h-11 rounded-l-none bg-accent hover:bg-accent/90 text-accent-foreground px-5"
+              >
+                <Search className="h-5 w-5" />
+              </Button>
+            </form>
+
+            {/* Contact Details - Right */}
+            <div className="hidden lg:flex items-center gap-6 text-sm shrink-0">
+              <a href="tel:+919752097656" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Phone className="h-4 w-4" />
+                <span className="font-medium">+91 97520 97656</span>
+              </a>
+              <a href="mailto:info.civadale@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Mail className="h-4 w-4" />
+                <span className="font-medium">info.civadale@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Mobile Search */}
+          <form onSubmit={handleSearch} className="sm:hidden pb-3">
+            <div className="flex">
+              <Input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="flex-1 h-10 rounded-r-none border-r-0 bg-white text-foreground placeholder:text-muted-foreground/70 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
+              />
+              <Button 
+                type="submit" 
+                className="h-10 rounded-l-none bg-accent hover:bg-accent/90 text-accent-foreground px-4"
+              >
+                <Search className="h-4 w-4" />
+              </Button>
+            </div>
           </form>
         </div>
       </div>
 
       {/* Main navigation */}
-      <nav className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src={taqiraLogo} 
-              alt="Taqira Logo" 
-              className="h-10 sm:h-12 w-auto rounded-lg"
-            />
-          </Link>
+      <nav className="container-custom mx-auto px-4 sm:px-6 lg:px-8 bg-card">
+        <div className="flex items-center justify-between h-14 lg:h-16">
 
-          {/* Desktop navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop navigation - centered */}
+          <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary relative py-2 ${
+                className={`text-sm font-semibold tracking-wide transition-colors hover:text-primary relative py-2 ${
                   location.pathname === item.href
-                    ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent'
-                    : 'text-muted-foreground'
+                    ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full'
+                    : 'text-foreground/80 hover:text-foreground'
                 }`}
               >
                 {item.name}

@@ -26,14 +26,17 @@ export const FeaturedProductsSlider = () => {
   }, [autoPlay]);
 
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section className="py-16 lg:py-20 bg-muted/40">
+      <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Featured Industrial Products
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-3 block">
+            Featured Products
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+            Premium Industrial Products
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Premium Industrial Consumables, Fabric Materials & Custom Workwear
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Industrial consumables, fabric materials & custom workwear for modern businesses
           </p>
         </div>
 
@@ -50,39 +53,41 @@ export const FeaturedProductsSlider = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-3 md:-ml-4">
               {featuredProducts.map((product) => (
                 <CarouselItem
                   key={product.id}
-                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                  className="pl-3 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                 >
-                  <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+                  <div className="bg-card rounded-xl overflow-hidden shadow-md border border-border hover:shadow-lg transition-all duration-300 h-full flex flex-col group">
                     <Link
                       to={`/featured/${product.id}`}
-                      className="relative aspect-square overflow-hidden cursor-pointer group"
+                      className="relative aspect-square overflow-hidden cursor-pointer"
                     >
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
+                      {/* Subtle overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </Link>
-                    <div className="p-4 flex flex-col flex-1">
+                    <div className="p-5 flex flex-col flex-1">
                       <Link
                         to={`/featured/${product.id}`}
-                        className="text-lg font-semibold text-foreground hover:text-primary transition-colors text-left mb-3"
+                        className="text-lg font-semibold text-foreground hover:text-primary transition-colors text-left mb-4 line-clamp-2 leading-snug"
                       >
                         {product.name}
                       </Link>
                       <div className="mt-auto">
                         <Button
                           variant="outline"
-                          size="sm"
-                          className="w-full"
+                          size="default"
+                          className="w-full font-semibold hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
                           asChild
                         >
                           <Link to={`/featured/${product.id}`}>
-                            View Description
+                            View Details
                           </Link>
                         </Button>
                       </div>
@@ -91,8 +96,8 @@ export const FeaturedProductsSlider = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-6" />
-            <CarouselNext className="hidden md:flex -right-4 lg:-right-6" />
+            <CarouselPrevious className="hidden md:flex -left-3 lg:-left-5 h-10 w-10 shadow-md" />
+            <CarouselNext className="hidden md:flex -right-3 lg:-right-5 h-10 w-10 shadow-md" />
           </Carousel>
         </div>
       </div>

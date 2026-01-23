@@ -30,17 +30,15 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container-custom mx-auto section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div>
-                <span className="font-display font-bold text-2xl">TAQIRA</span>
-                <p className="text-primary-foreground/60 text-xs">Quality You Can Trust...</p>
-              </div>
+            <div className="mb-5">
+              <span className="font-display font-bold text-2xl">TAQIRA</span>
+              <p className="text-primary-foreground/60 text-xs mt-1">Quality You Can Trust...</p>
             </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
+            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-5">
               <strong>Civadale Enterprise</strong> - Manufacturers & suppliers of industrial workwear, 
               ESD products, abrasives, safety equipment, and industrial consumables.
             </p>
@@ -48,13 +46,13 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Company</h4>
+            <h4 className="font-display font-semibold text-lg mb-5 text-primary-foreground">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                    className="text-primary-foreground/75 hover:text-accent transition-colors text-sm font-medium"
                   >
                     {link.name}
                   </Link>
@@ -63,15 +61,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Products - 2 columns */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Products</h4>
-            <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
+            <h4 className="font-display font-semibold text-lg mb-5 text-primary-foreground">Products</h4>
+            <ul className="grid grid-cols-1 gap-2.5">
+              {footerLinks.products.slice(0, 8).map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                    className="text-primary-foreground/75 hover:text-accent transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -82,31 +80,31 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-4">Contact Us</h4>
+            <h4 className="font-display font-semibold text-lg mb-5 text-primary-foreground">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                <span className="text-primary-foreground/80 text-sm">
+                <span className="text-primary-foreground/80 text-sm leading-relaxed">
                   Patna - 800008<br />
                   Bihar, India
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent shrink-0" />
+              <li>
                 <a
                   href="tel:+919752097656"
-                  className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                  className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors group"
                 >
-                  +91 97520 97656
+                  <Phone className="h-5 w-5 text-accent shrink-0" />
+                  <span className="text-sm font-semibold group-hover:underline">+91 97520 97656</span>
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-accent shrink-0" />
+              <li>
                 <a
                   href="mailto:info.civadale@gmail.com"
-                  className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+                  className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors group"
                 >
-                  info.civadale@gmail.com
+                  <Mail className="h-5 w-5 text-accent shrink-0" />
+                  <span className="text-sm group-hover:underline">info.civadale@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -120,7 +118,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20">
+        <div className="mt-10 pt-8 border-t border-primary-foreground/15">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-primary-foreground/60 text-sm">
               © {new Date().getFullYear()} Civadale Enterprise. All rights reserved.
