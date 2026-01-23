@@ -1,4 +1,4 @@
-import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers, Hand } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers, Hand, Box } from 'lucide-react';
 
 // Import category images
 import abrasivesImg from '@/assets/categories/abrasives.jpg';
@@ -18,6 +18,7 @@ import safetyImg from '@/assets/categories/safety.jpg';
 import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
 import tackClothImg from '@/assets/categories/tack-cloth.jpg';
 import safetyHandGlovesImg from '@/assets/categories/safety-hand-gloves.png';
+import packagingImg from '@/assets/categories/packaging.jpg';
 
 export interface Product {
   name: string;
@@ -314,6 +315,26 @@ export const categories: Category[] = [
       { name: 'Kevlar® Cut-Resistant Gloves', description: 'Aramid fiber gloves offering superior cut and heat protection for metal handling.' },
       { name: 'Disposable Gloves', description: 'Single-use nitrile, latex, or vinyl gloves for hygiene-sensitive applications.' },
       { name: 'Surgical Gloves', description: 'Sterile medical-grade gloves for surgical procedures and healthcare settings.' },
+    ],
+  },
+  {
+    id: 'packaging',
+    name: 'Packaging',
+    description: 'Complete range of industrial packaging materials for shipping, storage, and product protection applications.',
+    image: packagingImg,
+    icon: Box,
+    color: 'bg-amber-500/10 text-amber-600 border-amber-500/20',
+    products: [
+      { name: 'Corrugated Boxes', description: 'Durable cardboard boxes in various sizes for shipping and storage.' },
+      { name: 'Bubble Wrap', description: 'Protective cushioning material for fragile items during transit.' },
+      { name: 'Stretch Film', description: 'Stretchable plastic film for pallet wrapping and load stabilization.' },
+      { name: 'Shrink Film', description: 'Heat-shrinkable film for product bundling and tamper-evident packaging.' },
+      { name: 'Air Pillows', description: 'Inflatable cushioning for void fill and product protection in cartons.' },
+      { name: 'Foam Sheets & Rolls', description: 'Soft foam material for surface protection and cushioning.' },
+      { name: 'Strapping & Banding', description: 'PP and steel strapping for securing heavy loads and pallets.' },
+      { name: 'Edge Protectors', description: 'Cardboard or plastic corner guards for protecting shipment edges.' },
+      { name: 'Packing Paper', description: 'Kraft paper and newsprint for wrapping and void fill applications.' },
+      { name: 'Poly Bags', description: 'Plastic bags in various sizes for product packaging and protection.' },
     ],
   },
 ];
