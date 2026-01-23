@@ -37,7 +37,7 @@ export function Header() {
               <img 
                 src={taqiraLogo} 
                 alt="Taqira Logo" 
-                className="h-12 sm:h-14 w-auto rounded-lg shadow-md"
+                className="h-8 sm:h-9 lg:h-11 w-auto"
               />
             </Link>
 
