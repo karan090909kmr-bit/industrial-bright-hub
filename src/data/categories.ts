@@ -311,6 +311,9 @@ export const categories: Category[] = [
       { name: 'ESD Gloves', description: 'Anti-static gloves for electronics manufacturing and sensitive component handling.' },
       { name: 'Cotton Knitted Gloves', description: 'Breathable cotton gloves for light-duty handling and general purpose use.' },
       { name: 'Leather Work Gloves', description: 'Durable leather gloves for heavy-duty industrial and construction work.' },
+      { name: 'Kevlar® Cut-Resistant Gloves', description: 'Aramid fiber gloves offering superior cut and heat protection for metal handling.' },
+      { name: 'Disposable Gloves', description: 'Single-use nitrile, latex, or vinyl gloves for hygiene-sensitive applications.' },
+      { name: 'Surgical Gloves', description: 'Sterile medical-grade gloves for surgical procedures and healthcare settings.' },
     ],
   },
 ];
