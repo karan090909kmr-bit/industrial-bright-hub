@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone, Mail, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import taqiraLogo from '@/assets/taqira-logo-clean.png';
+import taqiraLogo from '@/assets/taqira-logo-new.png';
 
 const navigation = [
   { name: 'Home', href: '/' },
