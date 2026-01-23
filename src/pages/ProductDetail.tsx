@@ -19,39 +19,44 @@ const ProductDetail = () => {
 
   return (
     <Layout>
-      {/* Top Navigation Bar */}
-      <section className="bg-muted/50 border-b border-border">
-        <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      {/* Hero Section */}
+      <section className="relative min-h-[50vh] lg:min-h-[55vh] overflow-hidden">
+        {/* Background Image with Subtle Blur */}
+        <div className="absolute inset-0">
+          <img
+            src={category.image}
+            alt={category.name}
+            className="w-full h-full object-cover scale-105 blur-[1px]"
+          />
+          {/* Dark Overlay for Strong Text Contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+        </div>
+
+        {/* Content */}
+        <div className="relative container-custom mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center py-12 lg:py-20">
+          {/* Back Navigation */}
           <Link 
             to="/products" 
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-white/80 hover:text-white font-medium transition-colors mb-8 w-fit group"
           >
-            <ArrowLeft className="h-5 w-5" />
-            Back to Products
+            <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
+            <span>Back to Products</span>
           </Link>
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+
+          {/* Category Icon */}
+          <div className={`w-14 h-14 rounded-xl ${category.color} flex items-center justify-center mb-6 border border-white/20 backdrop-blur-sm`}>
+            <category.icon className="h-7 w-7" />
+          </div>
+
+          {/* Heading */}
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-5 max-w-3xl leading-tight">
             {category.name}
           </h1>
-        </div>
-      </section>
 
-      {/* Hero Section with Image */}
-      <section className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        <img
-          src={category.image}
-          alt={category.name}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20" />
-        <div className="absolute inset-0 flex flex-col justify-end">
-          <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-            <div className={`w-14 h-14 rounded-xl ${category.color} flex items-center justify-center mb-4 border backdrop-blur-sm`}>
-              <category.icon className="h-7 w-7" />
-            </div>
-            <p className="text-white/90 text-lg max-w-2xl">
-              {category.description}
-            </p>
-          </div>
+          {/* Description */}
+          <p className="text-white/90 text-lg sm:text-xl max-w-2xl leading-relaxed font-light">
+            {category.description}
+          </p>
         </div>
       </section>
 
