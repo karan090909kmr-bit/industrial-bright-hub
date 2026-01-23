@@ -18,8 +18,8 @@ export function HeroSection() {
         }} />
       </div>
 
-      <div className="relative container-custom mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative container-custom mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up">
@@ -27,16 +27,16 @@ export function HeroSection() {
               TAQIRA - Quality You Can Trust
             </div>
             
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
               Industrial Workwear &
               <span className="block text-accent">Quality Industrial Consumables</span>
             </h1>
             
-            <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-base lg:text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '0.2s' }}>
               Civadale Enterprise delivers quality-driven industrial workwear, ESD products, abrasives, safety equipment, and consumables—designed for safety, durability, and performance in modern industrial environments.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
               <Button variant="hero" size="xl" asChild>
                 <Link to="/contact" className="flex items-center gap-2">
                   Get a Quote
@@ -59,29 +59,29 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Visual element */}
+          {/* Stats Grid */}
           <div className="hidden lg:block relative animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
               {/* Decorative circles */}
               <div className="absolute -top-8 -right-8 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
               <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-industrial-light/30 rounded-full blur-2xl" />
               
-              {/* Stats cards */}
+              {/* Stats cards - 2x2 grid */}
               <div className="relative grid grid-cols-2 gap-4">
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20">
-                  <div className="text-4xl font-display font-bold text-accent mb-2">300+</div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
+                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">300+</div>
                   <div className="text-primary-foreground/80 text-sm">Products Available</div>
                 </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 mt-8">
-                  <div className="text-4xl font-display font-bold text-accent mb-2">8+</div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
+                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">8+</div>
                   <div className="text-primary-foreground/80 text-sm">Years Experience</div>
                 </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20">
-                  <div className="text-4xl font-display font-bold text-accent mb-2">100+</div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
+                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">100+</div>
                   <div className="text-primary-foreground/80 text-sm">Happy Clients</div>
                 </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 mt-8">
-                  <div className="text-4xl font-display font-bold text-accent mb-2">24/7</div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 border border-primary-foreground/20">
+                  <div className="text-3xl lg:text-4xl font-display font-bold text-accent mb-1">24/7</div>
                   <div className="text-primary-foreground/80 text-sm">Support Available</div>
                 </div>
               </div>
