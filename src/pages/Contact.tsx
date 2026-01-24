@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 const contactInfo = [
   {
@@ -36,7 +37,9 @@ const contactInfo = [
 const Contact = () => {
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
+  const location = useLocation();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -63,26 +66,65 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Prevent duplicate submissions
+    if (isSubmitting) return;
+    
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-    });
-    
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      productName: '',
-      requiredQuantity: '',
-      message: '',
-    });
-    setIsSubmitting(false);
+
+    try {
+      const submissionData = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        company: formData.company.trim(),
+        productName: formData.productName.trim(),
+        requiredQuantity: formData.requiredQuantity.trim(),
+        message: formData.message.trim(),
+        pageSource: window.location.origin + location.pathname + location.search,
+        submissionDate: new Date().toLocaleString('en-IN', { 
+          timeZone: 'Asia/Kolkata',
+          dateStyle: 'full',
+          timeStyle: 'short'
+        }),
+      };
+
+      const { data, error } = await supabase.functions.invoke('send-quote-request', {
+        body: submissionData,
+      });
+
+      if (error) throw error;
+
+      setIsSubmitted(true);
+      toast({
+        title: "Request Sent Successfully!",
+        description: "Thank you! Your request has been sent successfully. Our team will contact you shortly.",
+      });
+
+      // Reset form after short delay
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          productName: '',
+          requiredQuantity: '',
+          message: '',
+        });
+        setIsSubmitted(false);
+      }, 3000);
+
+    } catch (error: any) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your request. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -213,10 +255,15 @@ const Contact = () => {
                     variant="accent"
                     size="lg"
                     className="w-full sm:w-auto"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || isSubmitted}
                   >
                     {isSubmitting ? (
                       'Sending...'
+                    ) : isSubmitted ? (
+                      <>
+                        <CheckCircle className="mr-2 h-4 w-4" />
+                        Request Sent!
+                      </>
                     ) : (
                       <>
                         Send Message
@@ -224,6 +271,15 @@ const Contact = () => {
                       </>
                     )}
                   </Button>
+
+                  {isSubmitted && (
+                    <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                      <p className="text-green-700 dark:text-green-400 font-medium flex items-center gap-2">
+                        <CheckCircle className="h-5 w-5" />
+                        Thank you! Your request has been sent successfully. Our team will contact you shortly.
+                      </p>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>
