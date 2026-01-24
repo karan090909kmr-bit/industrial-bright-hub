@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    details: 'Patna - 800008\nBihar, India',
+    details: 'Nai Sadak Chowk, Patna City,\nPatna - 800008, Bihar, India',
   },
   {
     icon: Clock,
