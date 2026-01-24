@@ -48,6 +48,7 @@ const Contact = () => {
     productName: '',
     requiredQuantity: '',
     message: '',
+    honeypot: '', // Spam protection - hidden field
   });
 
   useEffect(() => {
@@ -81,6 +82,7 @@ const Contact = () => {
         productName: formData.productName.trim(),
         requiredQuantity: formData.requiredQuantity.trim(),
         message: formData.message.trim(),
+        honeypot: formData.honeypot, // Spam protection
         pageSource: window.location.origin + location.pathname + location.search,
         submissionDate: new Date().toLocaleString('en-IN', { 
           timeZone: 'Asia/Kolkata',
@@ -111,6 +113,7 @@ const Contact = () => {
           productName: '',
           requiredQuantity: '',
           message: '',
+          honeypot: '',
         });
         setIsSubmitted(false);
       }, 3000);
@@ -247,6 +250,18 @@ const Contact = () => {
                       placeholder="Tell us about your requirements..."
                       required
                       className="min-h-[150px] resize-none"
+                    />
+                  </div>
+
+                  {/* Honeypot field - hidden from users, catches bots */}
+                  <div className="absolute -left-[9999px]" aria-hidden="true">
+                    <Input
+                      type="text"
+                      name="honeypot"
+                      value={formData.honeypot}
+                      onChange={handleChange}
+                      tabIndex={-1}
+                      autoComplete="off"
                     />
                   </div>
 
