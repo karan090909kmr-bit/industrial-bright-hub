@@ -1,14 +1,25 @@
+# robots.txt for www.civadale.com
+# Last updated: January 2025
+
+# Google
 User-agent: Googlebot
 Allow: /
 
+# Bing
 User-agent: Bingbot
 Allow: /
 
+# Twitter
 User-agent: Twitterbot
 Allow: /
 
+# Facebook
 User-agent: facebookexternalhit
 Allow: /
 
+# All other bots
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://www.civadale.com/sitemap.xml
