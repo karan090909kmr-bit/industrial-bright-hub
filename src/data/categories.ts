@@ -368,6 +368,7 @@ export const categories: Category[] = [
       { name: 'Fire Extinguisher Cabinet', description: 'Protective enclosures for fire extinguishers in indoor and outdoor locations.' },
       { name: 'Fire Sprinkler Heads', description: 'Automatic sprinkler components for ceiling-mounted fire suppression systems.' },
       { name: 'Fire Resistant Suit', description: 'Aluminized and Nomex fire proximity suits for firefighters and rescue personnel.' },
+      { name: 'Fire Extinguisher Refilling Service', description: 'Professional refilling and pressure testing of all types of fire extinguisher cylinders with certification.' },
     ],
   },
 ];
