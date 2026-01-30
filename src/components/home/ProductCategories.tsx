@@ -21,6 +21,7 @@ const categoryBenefits: Record<string, string> = {
   'tack-cloth': 'Dust-Free Surface',
   'packaging': 'Secure Packaging',
   'safety-hand-gloves': 'Maximum Grip & Safety',
+  'fire-safety': 'Industrial Fire Protection',
 };
 
 export function ProductCategories() {
