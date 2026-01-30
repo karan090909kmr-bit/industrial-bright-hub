@@ -1,4 +1,4 @@
-import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers, Hand, Box } from 'lucide-react';
+import { Disc, ScrollText, HardHat, Package, Shirt, Factory, Sparkles, Wind, Paintbrush, Wrench, CircleDot, Shield, Layers, Hand, Box, Flame } from 'lucide-react';
 
 // Import category images
 import abrasivesImg from '@/assets/categories/abrasives.jpg';
@@ -19,6 +19,7 @@ import cleanroomProductsImg from '@/assets/categories/cleanroom-products.jpg';
 import tackClothImg from '@/assets/categories/tack-cloth.jpg';
 import safetyHandGlovesImg from '@/assets/categories/safety-hand-gloves.png';
 import packagingImg from '@/assets/categories/packaging.jpg';
+import fireSafetyImg from '@/assets/categories/fire-safety.jpg';
 
 export interface Product {
   name: string;
@@ -343,6 +344,30 @@ export const categories: Category[] = [
       { name: 'Edge Protectors', description: 'Cardboard or plastic corner guards for protecting shipment edges.' },
       { name: 'Packing Paper', description: 'Kraft paper and newsprint for wrapping and void fill applications.' },
       { name: 'Poly Bags', description: 'Plastic bags in various sizes for product packaging and protection.' },
+    ],
+  },
+  {
+    id: 'fire-safety',
+    name: 'Fire Safety Products',
+    description: 'Complete fire safety equipment and solutions including extinguishers, blankets, detectors, and signage for industrial and commercial fire protection.',
+    image: fireSafetyImg,
+    icon: Flame,
+    color: 'bg-red-500/10 text-red-600 border-red-500/20',
+    products: [
+      { name: 'ABC Powder Fire Extinguisher', description: 'Multi-purpose dry chemical extinguisher for Class A, B, and C fires in industrial settings.' },
+      { name: 'CO2 Fire Extinguisher', description: 'Carbon dioxide extinguisher ideal for electrical fires and sensitive equipment areas.' },
+      { name: 'Foam Fire Extinguisher', description: 'AFFF foam extinguisher for flammable liquid fires in workshops and storage areas.' },
+      { name: 'Water Fire Extinguisher', description: 'Pressurized water extinguisher for Class A fires involving wood, paper, and textiles.' },
+      { name: 'Fire Blanket', description: 'Heat-resistant blanket for smothering small fires and protecting personnel during evacuation.' },
+      { name: 'Fire Hose Reel', description: 'Wall-mounted hose reel system for first response fire fighting in buildings.' },
+      { name: 'Smoke Detector', description: 'Early warning smoke detection devices for industrial and commercial premises.' },
+      { name: 'Heat Detector', description: 'Temperature-sensitive fire detection for kitchens, garages, and dusty environments.' },
+      { name: 'Fire Alarm Panel', description: 'Centralized fire alarm control system for multi-zone fire monitoring and alerts.' },
+      { name: 'Emergency Exit Signs', description: 'Illuminated and photoluminescent exit signage for safe evacuation routes.' },
+      { name: 'Fire Safety Signage', description: 'Warning signs, instruction boards, and fire point markers for workplace compliance.' },
+      { name: 'Fire Extinguisher Cabinet', description: 'Protective enclosures for fire extinguishers in indoor and outdoor locations.' },
+      { name: 'Fire Sprinkler Heads', description: 'Automatic sprinkler components for ceiling-mounted fire suppression systems.' },
+      { name: 'Fire Resistant Suit', description: 'Aluminized and Nomex fire proximity suits for firefighters and rescue personnel.' },
     ],
   },
 ];
