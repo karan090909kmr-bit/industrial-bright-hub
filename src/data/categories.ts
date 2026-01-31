@@ -369,6 +369,7 @@ export const categories: Category[] = [
       { name: 'Fire Sprinkler Heads', description: 'Automatic sprinkler components for ceiling-mounted fire suppression systems.' },
       { name: 'Fire Resistant Suit', description: 'Aluminized and Nomex fire proximity suits for firefighters and rescue personnel.' },
       { name: 'Fire Extinguisher Refilling Service', description: 'Professional refilling and pressure testing of all types of fire extinguisher cylinders with certification.' },
+      { name: 'Industrial Factory Signage', description: 'Safety signs, exit signs, hazard warnings, and custom industrial signage for factory and workplace compliance.' },
     ],
   },
 ];
