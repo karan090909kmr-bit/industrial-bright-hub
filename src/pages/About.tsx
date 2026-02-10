@@ -118,30 +118,44 @@ const About = () => {
       {/* Quality You Can Trust Section */}
       <section className="section-padding bg-muted/30">
         <div className="container-custom mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
-              About Us
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-8">
-              Quality You Can Trust
-            </h2>
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                <strong className="text-foreground uppercase">Civadale Enterprise</strong> is a professionally managed organization 
-                engaged in the manufacturing of industrial workwear and trading of industrial consumables, 
-                serving a wide range of industries with reliable, quality-driven solutions.
-              </p>
-              <p>
-                Under our brand <strong className="text-primary uppercase">TAQIRA</strong>, we focus on delivering products that meet the practical 
-                demands of modern industrial environments—where safety, durability, and performance are critical. 
-                Our offerings are designed to support efficient operations while maintaining compliance with industry standards.
-              </p>
-              <p>
-                With a customer-centric approach, Civadale Enterprise combines quality manufacturing, 
-                trusted sourcing, and responsive service to ensure consistent value for our clients. 
-                We continuously strive to build long-term relationships by understanding customer needs 
-                and providing dependable solutions tailored to their requirements.
-              </p>
+      <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
+                About Us
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-6">
+                About Civadale Enterprise
+              </h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-foreground uppercase">Civadale Enterprise</strong> is a trusted manufacturer and supplier of industrial solutions, 
+                  serving diverse industries with high-quality PPE, safety equipment, abrasives, packaging materials, 
+                  fire safety products, and industrial consumables.
+                </p>
+                <p>
+                  With a strong commitment to quality, compliance, and customer satisfaction, we deliver reliable products 
+                  that help organizations maintain safe and efficient operations.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <h3 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-6">
+                About <span className="text-primary uppercase">TAQIRA</span> – Workwear Division
+              </h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-primary uppercase">TAQIRA</strong> is the dedicated industrial workwear brand of Civadale Enterprise, 
+                  specializing in customized industrial uniforms, ESD garments, and cleanroom apparel designed for demanding work environments.
+                </p>
+                <p>
+                  Our workwear solutions focus on comfort, durability, safety compliance, and professional appearance, 
+                  helping organizations enhance workforce safety and brand identity.
+                </p>
+                <p className="font-medium text-foreground italic">
+                  TAQIRA stands for workwear you can trust, building long-term partnerships through performance and reliability.
+                </p>
+              </div>
             </div>
           </div>
         </div>
