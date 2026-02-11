@@ -1,5 +1,6 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { featuredProducts } from '@/data/featuredProducts';
@@ -10,21 +11,43 @@ const FeaturedProductDetail = () => {
   const navigate = useNavigate();
   const product = featuredProducts.find(p => p.id === productId);
 
-  const handleGoBack = () => {
-    navigate(-1);
-  };
-
   if (!product) {
     return <Navigate to="/" replace />;
   }
 
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.description,
+    "image": product.image,
+    "brand": { "@type": "Brand", "name": "Civadale Enterprise" },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR",
+      "seller": { "@type": "Organization", "name": "Civadale Enterprise" }
+    },
+    "additionalProperty": product.specifications.map(spec => ({
+      "@type": "PropertyValue",
+      "name": spec.split(':')[0]?.trim(),
+      "value": spec.split(':')[1]?.trim() || spec
+    }))
+  };
+
   return (
     <Layout>
+      <SEOHead
+        title={`${product.name} | Industrial Supply - Civadale Enterprise`}
+        description={product.description.slice(0, 155)}
+        canonical={`/featured/${product.id}`}
+        jsonLd={productLd}
+      />
       {/* Breadcrumb */}
       <section className="bg-muted/30 py-4 border-b border-border">
         <div className="container mx-auto px-4">
           <button 
-            onClick={handleGoBack}
+            onClick={() => navigate(-1)}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
@@ -37,10 +60,10 @@ const FeaturedProductDetail = () => {
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-            Product Details
+            {product.name}
           </h1>
           <p className="text-lg text-muted-foreground">
-            Learn more about our featured industrial products
+            Featured industrial product from Civadale Enterprise
           </p>
         </div>
       </section>
@@ -48,14 +71,14 @@ const FeaturedProductDetail = () => {
       {/* Product Content */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
+          <article className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
             <div className="flex flex-col lg:flex-row">
               {/* Image Section */}
               <div className="lg:w-2/5 relative">
                 <div className="aspect-square lg:aspect-auto lg:h-full">
                   <img
                     src={product.image}
-                    alt={product.name}
+                    alt={`${product.name} - Industrial grade product from Civadale Enterprise for ${product.applications.join(', ')}`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -116,7 +139,7 @@ const FeaturedProductDetail = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
     </Layout>
