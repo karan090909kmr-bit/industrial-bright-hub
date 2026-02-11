@@ -1,4 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Target, Eye, Users, CheckCircle, ArrowRight, Shield, Cog, Handshake, Star, Quote } from 'lucide-react';
@@ -37,9 +38,36 @@ const values = [
   },
 ];
 
+const aboutLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Civadale Enterprise & TAQIRA",
+  "description": "Civadale Enterprise is a trusted manufacturer of industrial solutions. TAQIRA is the dedicated workwear brand specializing in ESD garments and cleanroom apparel.",
+  "url": "https://civadale.com/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Civadale Enterprise",
+    "alternateName": "TAQIRA",
+    "foundingDate": "2017",
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": "50+" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Patna",
+      "addressRegion": "Bihar",
+      "addressCountry": "IN"
+    }
+  }
+};
+
 const About = () => {
   return (
     <Layout>
+      <SEOHead
+        title="About Civadale Enterprise & TAQIRA | Our Story"
+        description="Civadale Enterprise is a trusted industrial supplier. TAQIRA, our workwear brand, specializes in ESD garments, cleanroom apparel & custom industrial uniforms."
+        canonical="/about"
+        jsonLd={aboutLd}
+      />
       {/* Hero Section */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -63,11 +91,10 @@ const About = () => {
                 <div className="w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={founderPortrait} 
-                    alt="Professional portrait" 
+                    alt="Founder of Civadale Enterprise - Industrial supply leader in Patna, Bihar" 
                     className="w-full h-full object-cover grayscale"
                   />
                 </div>
-                {/* Subtle decorative element */}
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/20 rounded-2xl -z-10" />
               </div>
             </div>
@@ -102,7 +129,6 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Quote */}
               <div className="relative bg-muted/50 rounded-xl p-6 border-l-4 border-primary">
                 <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/20" />
                 <p className="text-foreground font-medium italic">
@@ -118,7 +144,7 @@ const About = () => {
       {/* Quality You Can Trust Section */}
       <section className="section-padding bg-muted/30">
         <div className="container-custom mx-auto">
-      <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
                 About Us
@@ -189,7 +215,7 @@ const About = () => {
       <section className="section-padding bg-muted">
         <div className="container-custom mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-2xl p-8 lg:p-10 shadow-card border border-border">
+            <article className="bg-card rounded-2xl p-8 lg:p-10 shadow-card border border-border">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Target className="h-7 w-7 text-primary" />
               </div>
@@ -199,9 +225,9 @@ const About = () => {
                 delivering products that meet the practical demands of modern industrial environments 
                 with safety, durability, and performance at the core.
               </p>
-            </div>
+            </article>
             
-            <div className="bg-card rounded-2xl p-8 lg:p-10 shadow-card border border-border">
+            <article className="bg-card rounded-2xl p-8 lg:p-10 shadow-card border border-border">
               <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
                 <Eye className="h-7 w-7 text-accent" />
               </div>
@@ -211,7 +237,7 @@ const About = () => {
                 trusted sourcing, and responsive service—building long-term relationships through 
                 dependable solutions tailored to customer requirements.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -233,7 +259,7 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <div 
+              <article 
                 key={index}
                 className="card-industrial p-8 text-center animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -247,7 +273,7 @@ const About = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {value.description}
                 </p>
-              </div>
+              </article>
             ))}
           </div>
         </div>

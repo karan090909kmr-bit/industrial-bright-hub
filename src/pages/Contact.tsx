@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -34,6 +35,34 @@ const contactInfo = [
   },
 ];
 
+const contactLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Civadale Enterprise",
+  "description": "Request a quote or get in touch with Civadale Enterprise for industrial products, PPE, fire safety equipment, and custom workwear.",
+  "url": "https://civadale.com/contact",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Civadale Enterprise",
+    "telephone": "+91-97520-97656",
+    "email": "info.civadale@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nai Sadak Chowk, Patna City",
+      "addressLocality": "Patna",
+      "postalCode": "800008",
+      "addressRegion": "Bihar",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  }
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
@@ -48,7 +77,7 @@ const Contact = () => {
     productName: '',
     requiredQuantity: '',
     message: '',
-    honeypot: '', // Spam protection - hidden field
+    honeypot: '',
   });
 
   useEffect(() => {
@@ -67,10 +96,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Prevent duplicate submissions
     if (isSubmitting) return;
-    
     setIsSubmitting(true);
 
     try {
@@ -82,7 +108,7 @@ const Contact = () => {
         productName: formData.productName.trim(),
         requiredQuantity: formData.requiredQuantity.trim(),
         message: formData.message.trim(),
-        honeypot: formData.honeypot, // Spam protection
+        honeypot: formData.honeypot,
         pageSource: window.location.origin + location.pathname + location.search,
         submissionDate: new Date().toLocaleString('en-IN', { 
           timeZone: 'Asia/Kolkata',
@@ -103,17 +129,10 @@ const Contact = () => {
         description: "Thank you! Your request has been sent successfully. Our team will contact you shortly.",
       });
 
-      // Reset form after short delay
       setTimeout(() => {
         setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          productName: '',
-          requiredQuantity: '',
-          message: '',
-          honeypot: '',
+          name: '', email: '', phone: '', company: '',
+          productName: '', requiredQuantity: '', message: '', honeypot: '',
         });
         setIsSubmitted(false);
       }, 3000);
@@ -132,6 +151,12 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Contact Us | Get a Quote - Civadale Enterprise"
+        description="Request a quote for industrial products, PPE, fire safety equipment, and custom workwear from Civadale Enterprise. Call +91 97520 97656 or fill our form."
+        canonical="/contact"
+        jsonLd={contactLd}
+      />
       {/* Hero Section */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -163,115 +188,46 @@ const Contact = () => {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="John Doe"
-                        required
-                        className="h-12"
-                      />
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required className="h-12" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="john@company.com"
-                        required
-                        className="h-12"
-                      />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@company.com" required className="h-12" />
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+1 (234) 567-890"
-                        className="h-12"
-                      />
+                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+1 (234) 567-890" className="h-12" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="company">Company Name</Label>
-                      <Input
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        placeholder="Your Company"
-                        className="h-12"
-                      />
+                      <Input id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Your Company" className="h-12" />
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="productName">Product Name *</Label>
-                      <Input
-                        id="productName"
-                        name="productName"
-                        value={formData.productName}
-                        onChange={handleChange}
-                        placeholder="Enter product name"
-                        required
-                        className="h-12"
-                      />
+                      <Input id="productName" name="productName" value={formData.productName} onChange={handleChange} placeholder="Enter product name" required className="h-12" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="requiredQuantity">Required Quantity</Label>
-                      <Input
-                        id="requiredQuantity"
-                        name="requiredQuantity"
-                        value={formData.requiredQuantity}
-                        onChange={handleChange}
-                        placeholder="Enter Required Qty."
-                        className="h-12"
-                      />
+                      <Input id="requiredQuantity" name="requiredQuantity" value={formData.requiredQuantity} onChange={handleChange} placeholder="Enter Required Qty." className="h-12" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your requirements..."
-                      required
-                      className="min-h-[150px] resize-none"
-                    />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your requirements..." required className="min-h-[150px] resize-none" />
                   </div>
 
-                  {/* Honeypot field - hidden from users, catches bots */}
                   <div className="absolute -left-[9999px]" aria-hidden="true">
-                    <Input
-                      type="text"
-                      name="honeypot"
-                      value={formData.honeypot}
-                      onChange={handleChange}
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
+                    <Input type="text" name="honeypot" value={formData.honeypot} onChange={handleChange} tabIndex={-1} autoComplete="off" />
                   </div>
 
-                  <Button
-                    type="submit"
-                    variant="accent"
-                    size="lg"
-                    className="w-full sm:w-auto"
-                    disabled={isSubmitting || isSubmitted}
-                  >
+                  <Button type="submit" variant="accent" size="lg" className="w-full sm:w-auto" disabled={isSubmitting || isSubmitted}>
                     {isSubmitting ? (
                       'Sending...'
                     ) : isSubmitted ? (
@@ -300,7 +256,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="lg:col-span-2">
+            <aside className="lg:col-span-2">
               <div className="space-y-6">
                 <div>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-2">
@@ -313,10 +269,7 @@ const Contact = () => {
 
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
-                    <div
-                      key={index}
-                      className="bg-card rounded-xl p-6 border border-border shadow-card"
-                    >
+                    <div key={index} className="bg-card rounded-xl p-6 border border-border shadow-card">
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                           <info.icon className="h-6 w-6 text-primary" />
@@ -324,10 +277,7 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
                           {info.link ? (
-                            <a
-                              href={info.link}
-                              className="text-muted-foreground hover:text-primary transition-colors whitespace-pre-line"
-                            >
+                            <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors whitespace-pre-line">
                               {info.details}
                             </a>
                           ) : (
@@ -339,7 +289,6 @@ const Contact = () => {
                   ))}
                 </div>
 
-                {/* Why Contact Us */}
                 <div className="bg-muted rounded-xl p-6">
                   <h3 className="font-semibold text-foreground mb-4">Why Contact Us?</h3>
                   <ul className="space-y-3">
@@ -357,7 +306,7 @@ const Contact = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </aside>
           </div>
         </div>
       </section>

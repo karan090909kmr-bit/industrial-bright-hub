@@ -1,9 +1,28 @@
 import { Layout } from '@/components/layout/Layout';
+import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { categories } from '@/data/categories';
 import { useMemo } from 'react';
+
+const productsLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Industrial Products Catalog",
+  "description": "Browse 300+ industrial products including abrasives, tapes, PPE, fire safety equipment, pneumatic tools, and custom workwear from Civadale Enterprise.",
+  "url": "https://civadale.com/products",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": categories.length,
+    "itemListElement": categories.map((cat, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": cat.name,
+      "url": `https://civadale.com/products/${cat.id}`
+    }))
+  }
+};
 
 const Products = () => {
   const [searchParams] = useSearchParams();
@@ -11,7 +30,6 @@ const Products = () => {
 
   const filteredCategories = useMemo(() => {
     if (!searchQuery) return categories;
-    
     return categories.filter(category => {
       const nameMatch = category.name.toLowerCase().includes(searchQuery);
       const descMatch = category.description.toLowerCase().includes(searchQuery);
@@ -19,8 +37,15 @@ const Products = () => {
       return nameMatch || descMatch || productMatch;
     });
   }, [searchQuery]);
+
   return (
     <Layout>
+      <SEOHead
+        title="Industrial Products | PPE, Abrasives, Tapes & Safety"
+        description="Browse 300+ industrial products: abrasives, self-adhesive tapes, PPE, fire safety equipment, pneumatic tools, packaging materials & custom workwear. Bulk pricing available."
+        canonical="/products"
+        jsonLd={productsLd}
+      />
       {/* Hero Section */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -47,7 +72,7 @@ const Products = () => {
           )}
           <div className="space-y-16">
             {filteredCategories.map((category, index) => (
-              <div
+              <article
                 key={category.id}
                 id={category.id}
                 className="scroll-mt-24 animate-fade-up"
@@ -55,12 +80,11 @@ const Products = () => {
               >
                 <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card">
                   <div className="grid lg:grid-cols-5 gap-0">
-                    {/* Category Image */}
                     <div className="lg:col-span-2 relative">
                       <Link to={`/products/${category.id}`} className="block group">
                         <img
                           src={category.image}
-                          alt={category.name}
+                          alt={`${category.name} - Industrial ${category.name.toLowerCase()} products from Civadale Enterprise`}
                           className="w-full h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent lg:bg-gradient-to-r" />
@@ -78,7 +102,6 @@ const Products = () => {
                       </Link>
                     </div>
                     
-                    {/* Features List */}
                     <div className="lg:col-span-3 p-6 lg:p-8">
                       <div className="flex items-center justify-between mb-6">
                         <h3 className="font-semibold text-foreground">Products Include:</h3>
@@ -113,7 +136,7 @@ const Products = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
