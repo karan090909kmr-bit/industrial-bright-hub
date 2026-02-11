@@ -62,6 +62,7 @@ const ProductDetail = () => {
           <img
             src={category.image}
             alt={`${category.name} - Industrial grade ${category.name.toLowerCase()} from Civadale Enterprise India`}
+            loading="eager"
             className="w-full h-full object-cover scale-105 blur-[1px]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
@@ -151,6 +152,7 @@ const ProductDetail = () => {
                 <img
                   src={category.image}
                   alt={`${category.name} products from Civadale Enterprise`}
+                  loading="lazy"
                   className="w-full h-64 object-cover"
                 />
               </div>

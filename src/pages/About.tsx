@@ -92,6 +92,7 @@ const About = () => {
                   <img 
                     src={founderPortrait} 
                     alt="Founder of Civadale Enterprise - Industrial supply leader in Patna, Bihar" 
+                    loading="eager"
                     className="w-full h-full object-cover grayscale"
                   />
                 </div>

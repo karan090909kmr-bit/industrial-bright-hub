@@ -54,7 +54,8 @@ export function ProductCategories() {
               {/* Background image */}
               <img
                 src={category.image}
-                alt={category.name}
+                alt={`${category.name} - Industrial ${category.name.toLowerCase()} products from Civadale Enterprise`}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               />
               
