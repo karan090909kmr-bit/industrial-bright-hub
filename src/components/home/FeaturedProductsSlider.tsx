@@ -66,7 +66,8 @@ export const FeaturedProductsSlider = () => {
                     >
                       <img
                         src={product.image}
-                        alt={product.name}
+                        alt={`${product.name} - Industrial supply product from Civadale Enterprise`}
+                        loading="lazy"
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
                       {/* Bulk pricing badge */}

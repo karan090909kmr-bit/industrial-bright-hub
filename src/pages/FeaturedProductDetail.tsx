@@ -79,6 +79,7 @@ const FeaturedProductDetail = () => {
                   <img
                     src={product.image}
                     alt={`${product.name} - Industrial grade product from Civadale Enterprise for ${product.applications.join(', ')}`}
+                    loading="eager"
                     className="w-full h-full object-cover"
                   />
                 </div>
