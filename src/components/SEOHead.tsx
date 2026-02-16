@@ -10,7 +10,7 @@ interface SEOHeadProps {
   noIndex?: boolean;
 }
 
-const BASE_URL = 'https://civadale.com';
+const BASE_URL = 'https://taqira.com';
 
 export function SEOHead({
   title,
