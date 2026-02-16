@@ -1,5 +1,5 @@
-# robots.txt for www.civadale.com
-# Last updated: January 2025
+# robots.txt for taqira.com
+# Last updated: February 2026
 
 # Google
 User-agent: Googlebot
@@ -21,5 +21,5 @@ Allow: /
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://www.civadale.com/sitemap.xml
+# Sitemaps
+Sitemap: https://taqira.com/sitemap.xml

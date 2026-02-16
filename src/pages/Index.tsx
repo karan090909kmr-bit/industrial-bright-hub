@@ -11,8 +11,9 @@ const homeLd = {
   "@type": "Organization",
   "name": "Civadale Enterprise",
   "alternateName": "TAQIRA",
-  "url": "https://civadale.com/",
-  "logo": "https://civadale.com/logo.png",
+  "url": "https://taqira.com/",
+  "logo": "https://taqira.com/logo.png",
+  "sameAs": ["https://civadale.com/"],
   "description": "Industrial supply company specializing in fire extinguishers, PPE, pneumatic tools, abrasives, packaging materials, and custom workwear across India.",
   "address": {
     "@type": "PostalAddress",
