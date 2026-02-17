@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/industrial-bright-hub/" : "/",
+  base: process.env.GITHUB_ACTIONS ? "/industrial-bright-hub/" : "/",
   server: {
     host: "::",
     port: 8080,
