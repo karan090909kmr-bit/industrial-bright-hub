@@ -1,0 +1,25 @@
+# robots.txt for taqira.com
+# Last updated: February 2026
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+
+# All other bots
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://taqira.com/sitemap.xml
