@@ -21,7 +21,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/industrial-bright-hub">
+        <BrowserRouter basename="/industrial-bright-hub/">
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
