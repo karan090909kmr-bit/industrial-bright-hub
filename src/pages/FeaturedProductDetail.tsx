@@ -92,12 +92,14 @@ const FeaturedProductDetail = () => {
               {/* Image Section */}
               <div className="lg:w-2/5 relative">
                 <div className="aspect-square lg:aspect-auto lg:h-full">
-                  <img
-                    src={product.image}
-                    alt={`${product.name} — Industrial grade product for ${product.applications.join(', ')} from Civadale Enterprise India`}
-                    loading="eager"
-                    className="w-full h-full object-cover"
-                  />
+                    <img
+                      src={product.image}
+                      alt={`${product.name} — Buy online for ${product.applications.join(', ')}. Industrial grade product from Civadale Enterprise India`}
+                      loading="eager"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                    />
                 </div>
                 <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                   Featured

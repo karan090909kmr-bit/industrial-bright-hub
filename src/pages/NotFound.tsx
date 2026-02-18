@@ -16,8 +16,8 @@ const NotFound = () => {
     <Layout>
       <SEOHead
         title="Page Not Found | TAQIRA by Civadale Enterprise"
-        description="The page you're looking for doesn't exist. Browse our industrial safety, PPE, packaging and pneumatic tool products."
-        canonical="/404"
+        description="The page you're looking for doesn't exist. Browse our fire safety equipment, PPE, pneumatic tools, abrasives & packaging products."
+        noIndex={true}
       />
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4 text-center max-w-2xl">
