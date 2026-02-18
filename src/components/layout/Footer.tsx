@@ -70,8 +70,8 @@ export function Footer() {
           {/* Products */}
           <nav aria-label="Product categories navigation">
             <h4 className="font-display font-semibold text-lg mb-5 text-primary-foreground">Products</h4>
-            <ul className="grid grid-cols-1 gap-2.5">
-              {footerLinks.products.slice(0, 8).map((link) => (
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5">
+              {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}

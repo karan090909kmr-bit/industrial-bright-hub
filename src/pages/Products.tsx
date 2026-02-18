@@ -94,8 +94,10 @@ const Products = () => {
                       <Link to={`/products/${category.id}`} className="block group">
                         <img
                           src={category.image}
-                          alt={`${category.name} — Industrial grade ${category.name.toLowerCase()} products for manufacturing and automotive industries, supplied by Civadale Enterprise India`}
+                          alt={`${category.name} — Buy industrial grade ${category.name.toLowerCase()} products online. Bulk pricing from Civadale Enterprise, Patna India`}
                           loading="lazy"
+                          width={600}
+                          height={400}
                           className="w-full h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent lg:bg-gradient-to-r" />

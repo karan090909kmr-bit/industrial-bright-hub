@@ -66,8 +66,10 @@ export const FeaturedProductsSlider = () => {
                     >
                       <img
                         src={product.image}
-                        alt={`${product.name} - Industrial supply product from Civadale Enterprise`}
+                        alt={`${product.name} — Premium industrial product for bulk purchase from Civadale Enterprise India`}
                         loading="lazy"
+                        width={400}
+                        height={400}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
                       {/* Bulk pricing badge */}

@@ -34,7 +34,10 @@ export const ProductDescriptions = () => {
                   <div className="aspect-square lg:aspect-auto lg:h-full">
                     <img
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} — Industrial grade product for ${product.applications.join(', ')} from Civadale Enterprise India`}
+                      loading="lazy"
+                      width={400}
+                      height={400}
                       className="w-full h-full object-cover"
                     />
                   </div>

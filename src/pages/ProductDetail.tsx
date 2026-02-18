@@ -61,8 +61,10 @@ const ProductDetail = () => {
         <div className="absolute inset-0">
           <img
             src={category.image}
-            alt={`${category.name} — Industrial grade ${category.name.toLowerCase()} products available for bulk purchase from Civadale Enterprise India`}
+            alt={`${category.name} supplier India — Buy industrial ${category.name.toLowerCase()} online with bulk pricing from Civadale Enterprise`}
             loading="eager"
+            width={1200}
+            height={600}
             className="w-full h-full object-cover scale-105 blur-[1px]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
@@ -151,8 +153,10 @@ const ProductDetail = () => {
               <div className="mt-6 rounded-2xl overflow-hidden border border-border">
                 <img
                   src={category.image}
-                  alt={`${category.name} products — high-quality industrial ${category.name.toLowerCase()} from Civadale Enterprise`}
+                  alt={`${category.name} — High-quality industrial ${category.name.toLowerCase()} products from Civadale Enterprise India`}
                   loading="lazy"
+                  width={400}
+                  height={256}
                   className="w-full h-64 object-cover"
                 />
               </div>

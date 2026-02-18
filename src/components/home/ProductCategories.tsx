@@ -54,8 +54,10 @@ export function ProductCategories() {
               {/* Background image */}
               <img
                 src={category.image}
-                alt={`${category.name} - Industrial ${category.name.toLowerCase()} products from Civadale Enterprise`}
+                alt={`${category.name} — Buy industrial ${category.name.toLowerCase()} online from Civadale Enterprise, Patna India. Bulk orders & pan-India delivery.`}
                 loading="lazy"
+                width={400}
+                height={300}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               />
               

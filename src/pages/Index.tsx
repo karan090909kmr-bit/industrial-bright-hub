@@ -76,6 +76,44 @@ const homeLd = [
       "target": "https://taqira.com/products?search={search_term_string}",
       "query-input": "required name=search_term_string"
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What products does Civadale Enterprise supply?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Civadale Enterprise supplies 300+ industrial products including fire extinguishers, PPE (helmets, gloves, safety shoes), pneumatic tools, abrasives, BOPP tapes, masking tapes, stretch films, polishing pads, spray guns, filters, industrial workwear, and custom ESD/cleanroom garments under the TAQIRA brand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer bulk pricing and pan-India delivery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer competitive bulk pricing on all products with no minimum order requirement. We deliver across all states in India with reliable logistics and typically respond to quote requests within 24 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is TAQIRA workwear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TAQIRA is the dedicated industrial workwear brand of Civadale Enterprise, specializing in lint-free garments, ESD coveralls and aprons, lab coats, cleanroom apparel, and custom corporate uniforms designed for demanding industrial environments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide fire extinguisher refilling services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we provide fire extinguisher refilling, testing, and AMC (Annual Maintenance Contract) services for all types of fire extinguishers including ABC, CO2, Clean Agent, and Water Type extinguishers across Bihar and other states."
+        }
+      }
+    ]
   }
 ];
 
