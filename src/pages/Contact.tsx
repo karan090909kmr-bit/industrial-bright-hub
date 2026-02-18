@@ -35,33 +35,43 @@ const contactInfo = [
   },
 ];
 
-const contactLd = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact Civadale Enterprise",
-  "description": "Request a quote or get in touch with Civadale Enterprise for industrial products, PPE, fire safety equipment, and custom workwear.",
-  "url": "https://civadale.com/contact",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Civadale Enterprise",
-    "telephone": "+91-97520-97656",
-    "email": "info.civadale@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Nai Sadak Chowk, Patna City",
-      "addressLocality": "Patna",
-      "postalCode": "800008",
-      "addressRegion": "Bihar",
-      "addressCountry": "IN"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
-      "closes": "18:00"
+const contactLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Civadale Enterprise — Get a Quote for Industrial Products",
+    "description": "Request a quote or get in touch with Civadale Enterprise for fire extinguishers, PPE, pneumatic tools, abrasives, and industrial packaging materials.",
+    "url": "https://taqira.com/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Civadale Enterprise",
+      "telephone": "+91-97520-97656",
+      "email": "info.civadale@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nai Sadak Chowk, Patna City",
+        "addressLocality": "Patna",
+        "postalCode": "800008",
+        "addressRegion": "Bihar",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://taqira.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://taqira.com/contact" }
+    ]
   }
-};
+];
 
 const Contact = () => {
   const { toast } = useToast();
@@ -152,8 +162,8 @@ const Contact = () => {
   return (
     <Layout>
       <SEOHead
-        title="Contact Us | Get a Quote - Civadale Enterprise"
-        description="Request a quote for industrial products, PPE, fire safety equipment, and custom workwear from Civadale Enterprise. Call +91 97520 97656 or fill our form."
+        title="Contact Us | Get a Quote for PPE, Fire Safety & Industrial Products"
+        description="Request a quote for fire extinguishers, PPE, pneumatic tools, abrasives & packaging from Civadale Enterprise, Patna. Call +91 97520 97656 or fill our form for bulk pricing."
         canonical="/contact"
         jsonLd={contactLd}
       />
@@ -199,7 +209,7 @@ const Contact = () => {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+1 (234) 567-890" className="h-12" />
+                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+91 98765 43210" className="h-12" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="company">Company Name</Label>

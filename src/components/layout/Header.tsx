@@ -33,18 +33,20 @@ export function Header() {
         <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-3 gap-4">
             {/* Logo - Left */}
-            <Link to="/" className="flex items-center shrink-0">
+            <Link to="/" className="flex items-center shrink-0" aria-label="TAQIRA by Civadale Enterprise — Home">
               <img 
                 src={taqiraLogo} 
-                alt="Taqira Logo" 
+                alt="TAQIRA by Civadale Enterprise — Industrial PPE, Fire Safety & Workwear Supplier" 
                 className="h-8 sm:h-9 lg:h-11 w-auto"
+                width={132}
+                height={44}
               />
             </Link>
 
             {/* Search Bar - Center */}
-            <form onSubmit={handleSearch} className="hidden sm:flex flex-1 max-w-xl mx-4 lg:mx-8">
+            <form onSubmit={handleSearch} className="hidden sm:flex flex-1 max-w-xl mx-4 lg:mx-8" role="search" aria-label="Search products">
               <Input
-                type="text"
+                type="search"
                 placeholder="Search products, categories, materials..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -53,6 +55,7 @@ export function Header() {
               <Button 
                 type="submit" 
                 className="h-11 rounded-l-none bg-accent hover:bg-accent/90 text-accent-foreground px-5"
+                aria-label="Search"
               >
                 <Search className="h-5 w-5" />
               </Button>
@@ -61,21 +64,21 @@ export function Header() {
             {/* Contact Details - Right */}
             <div className="hidden lg:flex items-center gap-6 text-sm shrink-0">
               <a href="tel:+919752097656" className="flex items-center gap-2 hover:text-accent transition-colors">
-                <Phone className="h-4 w-4" />
+                <Phone className="h-4 w-4" aria-hidden="true" />
                 <span className="font-medium">+91 97520 97656</span>
               </a>
               <a href="mailto:info.civadale@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-                <Mail className="h-4 w-4" />
+                <Mail className="h-4 w-4" aria-hidden="true" />
                 <span className="font-medium">info.civadale@gmail.com</span>
               </a>
             </div>
           </div>
 
           {/* Mobile Search */}
-          <form onSubmit={handleSearch} className="sm:hidden pb-3">
+          <form onSubmit={handleSearch} className="sm:hidden pb-3" role="search" aria-label="Search products">
             <div className="flex">
               <Input
-                type="text"
+                type="search"
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -84,6 +87,7 @@ export function Header() {
               <Button 
                 type="submit" 
                 className="h-10 rounded-l-none bg-accent hover:bg-accent/90 text-accent-foreground px-4"
+                aria-label="Search"
               >
                 <Search className="h-4 w-4" />
               </Button>
@@ -93,7 +97,7 @@ export function Header() {
       </div>
 
       {/* Main navigation */}
-      <nav className="container-custom mx-auto px-4 sm:px-6 lg:px-8 bg-card">
+      <nav className="container-custom mx-auto px-4 sm:px-6 lg:px-8 bg-card" aria-label="Main navigation">
         <div className="flex items-center justify-between h-14 lg:h-16 relative">
           {/* Empty spacer for left side on desktop */}
           <div className="hidden lg:block w-32" />
@@ -127,6 +131,8 @@ export function Header() {
             type="button"
             className="lg:hidden p-2 text-foreground ml-auto"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

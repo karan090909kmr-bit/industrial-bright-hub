@@ -1,4 +1,4 @@
-import { useParams, Navigate, useNavigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate, Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
@@ -21,12 +21,18 @@ const FeaturedProductDetail = () => {
     "name": product.name,
     "description": product.description,
     "image": product.image,
+    "url": `https://taqira.com/featured/${product.id}`,
     "brand": { "@type": "Brand", "name": "Civadale Enterprise" },
+    "manufacturer": { "@type": "Organization", "name": "Civadale Enterprise" },
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
       "priceCurrency": "INR",
-      "seller": { "@type": "Organization", "name": "Civadale Enterprise" }
+      "seller": {
+        "@type": "Organization",
+        "name": "Civadale Enterprise",
+        "url": "https://taqira.com"
+      }
     },
     "additionalProperty": product.specifications.map(spec => ({
       "@type": "PropertyValue",
@@ -35,26 +41,36 @@ const FeaturedProductDetail = () => {
     }))
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://taqira.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Featured Products", "item": "https://taqira.com/" },
+      { "@type": "ListItem", "position": 3, "name": product.name, "item": `https://taqira.com/featured/${product.id}` }
+    ]
+  };
+
   return (
     <Layout>
       <SEOHead
-        title={`${product.name} | Industrial Supply - Civadale Enterprise`}
-        description={product.description.slice(0, 155)}
+        title={`${product.name} | Buy Online — Civadale Enterprise India`}
+        description={`${product.description.slice(0, 130)} Bulk pricing & fast delivery across India.`}
         canonical={`/featured/${product.id}`}
-        jsonLd={productLd}
+        jsonLd={[productLd, breadcrumbLd]}
       />
       {/* Breadcrumb */}
-      <section className="bg-muted/30 py-4 border-b border-border">
+      <nav className="bg-muted/30 py-4 border-b border-border" aria-label="Breadcrumb">
         <div className="container mx-auto px-4">
-          <button 
-            onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back
-          </button>
+          <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+            <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
+            <li>/</li>
+            <li><Link to="/products" className="hover:text-primary transition-colors">Products</Link></li>
+            <li>/</li>
+            <li className="text-foreground font-medium">{product.name}</li>
+          </ol>
         </div>
-      </section>
+      </nav>
 
       {/* Product Header */}
       <section className="py-8 bg-muted/30">
@@ -78,7 +94,7 @@ const FeaturedProductDetail = () => {
                 <div className="aspect-square lg:aspect-auto lg:h-full">
                   <img
                     src={product.image}
-                    alt={`${product.name} - Industrial grade product from Civadale Enterprise for ${product.applications.join(', ')}`}
+                    alt={`${product.name} — Industrial grade product for ${product.applications.join(', ')} from Civadale Enterprise India`}
                     loading="eager"
                     className="w-full h-full object-cover"
                   />
@@ -91,7 +107,7 @@ const FeaturedProductDetail = () => {
               {/* Content Section */}
               <div className="lg:w-3/5 p-6 lg:p-10 flex flex-col">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  {product.name}
+                  Product Details
                 </h2>
                 
                 <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
@@ -101,7 +117,7 @@ const FeaturedProductDetail = () => {
                 {/* Specifications */}
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold text-foreground mb-3">
-                    Specifications
+                    Technical Specifications
                   </h3>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {product.specifications.map((spec, idx) => (
@@ -116,7 +132,7 @@ const FeaturedProductDetail = () => {
                 {/* Applications */}
                 <div className="mb-8">
                   <h3 className="text-lg font-semibold text-foreground mb-3">
-                    Applications
+                    Industrial Applications
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {product.applications.map((app, idx) => (
