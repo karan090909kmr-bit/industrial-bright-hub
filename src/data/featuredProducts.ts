@@ -8,6 +8,9 @@ import boppTape from '@/assets/featured/bopp-tape.png';
 import labCoat from '@/assets/featured/lab-coat.png';
 import esdCoverallApron from '@/assets/featured/esd-coverall-apron.png';
 import lintFreeCoverallApron from '@/assets/featured/lint-free-coverall-apron.png';
+import safetyShoes from '@/assets/featured/safety-shoes.jpg';
+import safetyHelmet from '@/assets/featured/safety-helmet.jpg';
+import fireExtinguisher from '@/assets/featured/fire-extinguisher.jpg';
 
 export interface FeaturedProduct {
   id: string;
@@ -207,6 +210,63 @@ export const featuredProducts: FeaturedProduct[] = [
       'Wood finishing',
       'Metal surface prep',
       'Paint correction',
+    ],
+  },
+  {
+    id: 'safety-shoes',
+    name: 'Safety Shoes',
+    image: safetyShoes,
+    description: 'Industrial-grade steel-toe safety shoes designed for heavy-duty workplace protection. Features anti-slip sole, oil-resistant outsole, and impact-resistant toe cap for maximum foot safety in factories, construction sites, and warehouses.',
+    specifications: [
+      'Toe Cap: Steel / Composite',
+      'Sole: PU / Rubber anti-slip',
+      'Upper: Genuine leather / PU leather',
+      'Standard: IS 15298 / EN ISO 20345',
+      'Sizes: 5 - 12 UK',
+    ],
+    applications: [
+      'Construction sites',
+      'Factory floors',
+      'Warehouse operations',
+      'Heavy engineering',
+    ],
+  },
+  {
+    id: 'safety-helmet',
+    name: 'Safety Helmet',
+    image: safetyHelmet,
+    description: 'High-impact industrial safety helmet (hard hat) with adjustable ratchet suspension for superior head protection. Lightweight HDPE shell with ventilation and sweat-absorbing headband for all-day comfort on job sites.',
+    specifications: [
+      'Material: HDPE / ABS shell',
+      'Suspension: 6-point ratchet',
+      'Standard: IS 2925 / EN 397',
+      'Weight: ~300 g',
+      'Colors: Yellow, White, Blue, Red',
+    ],
+    applications: [
+      'Construction & civil work',
+      'Mining & quarrying',
+      'Oil & gas plants',
+      'Industrial maintenance',
+    ],
+  },
+  {
+    id: 'fire-extinguisher',
+    name: 'Fire Extinguisher',
+    image: fireExtinguisher,
+    description: 'ISI-marked ABC dry chemical powder fire extinguisher suitable for Class A, B, and C fires. Ideal for factories, offices, warehouses, and commercial establishments. Available in multiple capacities with refilling service.',
+    specifications: [
+      'Type: ABC Dry Chemical Powder',
+      'Capacity: 1 kg, 2 kg, 4 kg, 6 kg, 9 kg',
+      'Standard: IS 15683 / BIS certified',
+      'Discharge Time: 10-15 seconds',
+      'Pressure: Stored pressure type',
+    ],
+    applications: [
+      'Factory & warehouse safety',
+      'Office buildings',
+      'Commercial establishments',
+      'Vehicle fire protection',
     ],
   },
 ];
