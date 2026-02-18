@@ -22,7 +22,7 @@ const ProductDetail = () => {
     "@type": "ProductGroup",
     "name": category.name,
     "description": category.description,
-    "url": `https://civadale.com/products/${category.id}`,
+    "url": `https://taqira.com/products/${category.id}`,
     "brand": { "@type": "Brand", "name": "Civadale Enterprise" },
     "hasVariant": category.products.map(p => ({
       "@type": "Product",
@@ -42,17 +42,17 @@ const ProductDetail = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://civadale.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://civadale.com/products" },
-      { "@type": "ListItem", "position": 3, "name": category.name, "item": `https://civadale.com/products/${category.id}` }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://taqira.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://taqira.com/products" },
+      { "@type": "ListItem", "position": 3, "name": category.name, "item": `https://taqira.com/products/${category.id}` }
     ]
   };
 
   return (
     <Layout>
       <SEOHead
-        title={`${category.name} | Industrial ${category.name} Supplier India`}
-        description={category.description.slice(0, 155)}
+        title={`${category.name} Supplier India | Buy ${category.name} Online — TAQIRA`}
+        description={`${category.description.slice(0, 120)} Bulk pricing & pan-India delivery from Civadale Enterprise.`}
         canonical={`/products/${category.id}`}
         jsonLd={[categoryLd, breadcrumbLd]}
       />
@@ -61,7 +61,7 @@ const ProductDetail = () => {
         <div className="absolute inset-0">
           <img
             src={category.image}
-            alt={`${category.name} - Industrial grade ${category.name.toLowerCase()} from Civadale Enterprise India`}
+            alt={`${category.name} — Industrial grade ${category.name.toLowerCase()} products available for bulk purchase from Civadale Enterprise India`}
             loading="eager"
             className="w-full h-full object-cover scale-105 blur-[1px]"
           />
@@ -69,14 +69,14 @@ const ProductDetail = () => {
         </div>
 
         <div className="relative container-custom mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center py-12 lg:py-20">
-          <nav aria-label="Breadcrumb">
-            <Link 
-              to="/products" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white font-medium transition-colors mb-8 w-fit group"
-            >
-              <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
-              <span>Back to Products</span>
-            </Link>
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center gap-2 text-white/70 text-sm">
+              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li>/</li>
+              <li><Link to="/products" className="hover:text-white transition-colors">Products</Link></li>
+              <li>/</li>
+              <li className="text-white font-medium">{category.name}</li>
+            </ol>
           </nav>
 
           <div className={`w-14 h-14 rounded-xl ${category.color} flex items-center justify-center mb-6 border border-white/20 backdrop-blur-sm`}>
@@ -99,7 +99,7 @@ const ProductDetail = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-8">
-                Available Products
+                Available {category.name} Products
               </h2>
               <ul className="space-y-3">
                 {category.products.map((product, idx) => (
@@ -129,16 +129,16 @@ const ProductDetail = () => {
             <aside className="lg:sticky lg:top-24 h-fit">
               <div className="bg-muted rounded-2xl p-8 lg:p-10">
                 <h3 className="font-display text-xl font-bold text-foreground mb-4">
-                  Need a Quote?
+                  Need a Quote for {category.name}?
                 </h3>
                 <p className="text-muted-foreground mb-6">
                   Get in touch with our team to discuss your requirements for {category.name.toLowerCase()}. 
-                  We offer competitive pricing and custom solutions.
+                  We offer competitive bulk pricing and pan-India delivery.
                 </p>
                 <div className="space-y-3">
                   <Button variant="default" size="lg" className="w-full" asChild>
                     <Link to={`/contact?product=${encodeURIComponent(category.name)}`} className="flex items-center justify-center gap-2">
-                      Request Quote
+                      Request Quote for {category.name}
                       <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
@@ -151,10 +151,31 @@ const ProductDetail = () => {
               <div className="mt-6 rounded-2xl overflow-hidden border border-border">
                 <img
                   src={category.image}
-                  alt={`${category.name} products from Civadale Enterprise`}
+                  alt={`${category.name} products — high-quality industrial ${category.name.toLowerCase()} from Civadale Enterprise`}
                   loading="lazy"
                   className="w-full h-64 object-cover"
                 />
+              </div>
+
+              {/* Related Categories */}
+              <div className="mt-6 bg-card rounded-2xl p-6 border border-border">
+                <h3 className="font-semibold text-foreground mb-4">Related Categories</h3>
+                <ul className="space-y-2">
+                  {categories
+                    .filter(c => c.id !== category.id)
+                    .slice(0, 5)
+                    .map(c => (
+                      <li key={c.id}>
+                        <Link
+                          to={`/products/${c.id}`}
+                          className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          <ArrowRight className="h-3 w-3" />
+                          {c.name}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
               </div>
             </aside>
           </div>

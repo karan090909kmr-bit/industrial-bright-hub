@@ -8,22 +8,22 @@ const footerLinks = {
     { name: 'Contact Us', href: '/contact' },
   ],
   products: [
-    { name: 'Abrasives', href: '/products' },
-    { name: 'Self Adhesive Tapes', href: '/products' },
-    { name: 'Workwear', href: '/products' },
-    { name: 'Polishing Pads', href: '/products' },
-    { name: 'Wipes', href: '/products' },
-    { name: 'Backup Pad', href: '/products' },
-    { name: 'Spray Gun', href: '/products' },
-    { name: 'Polishing Compound', href: '/products' },
-    { name: 'Filters', href: '/products' },
-    { name: 'Paint Booth Chemicals', href: '/products' },
-    { name: 'Pneumatic Tools', href: '/products' },
-    { name: 'Industrial Fabrics', href: '/products' },
-    { name: 'Industrial Consumables', href: '/products' },
-    { name: 'Safety Products', href: '/products' },
-    { name: 'Cleanroom Products', href: '/products' },
-    { name: 'Tack Cloth', href: '/products' },
+    { name: 'Abrasives', href: '/products/abrasives' },
+    { name: 'Self Adhesive Tapes', href: '/products/tapes' },
+    { name: 'Workwear (TAQIRA)', href: '/products/workwear' },
+    { name: 'Fire Safety', href: '/products/fire-safety' },
+    { name: 'Safety & PPE', href: '/products/safety' },
+    { name: 'Pneumatic Tools', href: '/products/pneumatic-tools' },
+    { name: 'Polishing Pads', href: '/products/polishing-pads' },
+    { name: 'Packaging', href: '/products/packaging' },
+    { name: 'Wipes', href: '/products/wipes' },
+    { name: 'Cleanroom Products', href: '/products/cleanroom-products' },
+    { name: 'Safety Hand Gloves', href: '/products/safety-hand-gloves' },
+    { name: 'Filters', href: '/products/filters' },
+    { name: 'Spray Guns', href: '/products/spray-gun' },
+    { name: 'Tack Cloth', href: '/products/tack-cloth' },
+    { name: 'Industrial Fabrics', href: '/products/fabrics' },
+    { name: 'Consumables', href: '/products/consumables' },
   ],
 };
 
@@ -36,22 +36,22 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-5">
               <span className="font-display font-bold text-2xl">TAQIRA</span>
-              <p className="text-primary-foreground/60 text-xs mt-1">Serving Industrial Buyers Across India</p>
+              <p className="text-primary-foreground/60 text-xs mt-1">by Civadale Enterprise · Serving Industrial Buyers Across India</p>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
-              <strong>Civadale Enterprise</strong> - 8+ years supplying ESD workwear, 
-              abrasives, safety equipment & industrial consumables to 100+ businesses.
+              8+ years supplying fire extinguishers, PPE, pneumatic tools, 
+              abrasives, tapes, packaging materials & ESD workwear to 100+ businesses across India.
             </p>
             <div className="bg-accent/20 rounded-lg p-3 mb-4">
               <p className="text-accent text-sm font-semibold">Need Bulk Pricing?</p>
-              <a href="/contact" className="text-primary-foreground text-sm hover:text-accent transition-colors">
+              <Link to="/contact" className="text-primary-foreground text-sm hover:text-accent transition-colors">
                 Get a quote in 24 hours →
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <nav aria-label="Company navigation">
             <h4 className="font-display font-semibold text-lg mb-5 text-primary-foreground">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -65,10 +65,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Products - 2 columns */}
-          <div>
+          {/* Products */}
+          <nav aria-label="Product categories navigation">
             <h4 className="font-display font-semibold text-lg mb-5 text-primary-foreground">Products</h4>
             <ul className="grid grid-cols-1 gap-2.5">
               {footerLinks.products.slice(0, 8).map((link) => (
@@ -82,25 +82,25 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact Info */}
           <div>
             <h4 className="font-display font-semibold text-lg mb-5 text-primary-foreground">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                <span className="text-primary-foreground/80 text-sm leading-relaxed">
+                <MapPin className="h-5 w-5 text-accent shrink-0 mt-0.5" aria-hidden="true" />
+                <address className="text-primary-foreground/80 text-sm leading-relaxed not-italic">
                   Nai Sadak Chowk, Patna City,<br />
                   Patna - 800008, Bihar, India
-                </span>
+                </address>
               </li>
               <li>
                 <a
                   href="tel:+919752097656"
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors group"
                 >
-                  <Phone className="h-5 w-5 text-accent shrink-0" />
+                  <Phone className="h-5 w-5 text-accent shrink-0" aria-hidden="true" />
                   <span className="text-sm font-semibold group-hover:underline">+91 97520 97656</span>
                 </a>
               </li>
@@ -109,12 +109,12 @@ export function Footer() {
                   href="mailto:info.civadale@gmail.com"
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-accent transition-colors group"
                 >
-                  <Mail className="h-5 w-5 text-accent shrink-0" />
+                  <Mail className="h-5 w-5 text-accent shrink-0" aria-hidden="true" />
                   <span className="text-sm group-hover:underline">info.civadale@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Clock className="h-5 w-5 text-accent shrink-0" />
+                <Clock className="h-5 w-5 text-accent shrink-0" aria-hidden="true" />
                 <span className="text-primary-foreground/80 text-sm">
                   Mon - Sat: 9:00 AM - 6:00 PM
                 </span>
@@ -129,13 +129,8 @@ export function Footer() {
             <p className="text-primary-foreground/60 text-sm">
               © {new Date().getFullYear()} Civadale Enterprise. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <Link to="/privacy" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">
-                Terms of Service
-              </Link>
+            <div className="flex items-center gap-6 text-primary-foreground/60 text-sm">
+              <span>TAQIRA — Quality Industrial Products & Workwear</span>
             </div>
           </div>
         </div>

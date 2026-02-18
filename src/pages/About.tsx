@@ -38,33 +38,45 @@ const values = [
   },
 ];
 
-const aboutLd = {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About Civadale Enterprise & TAQIRA",
-  "description": "Civadale Enterprise is a trusted manufacturer of industrial solutions. TAQIRA is the dedicated workwear brand specializing in ESD garments and cleanroom apparel.",
-  "url": "https://civadale.com/about",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Civadale Enterprise",
-    "alternateName": "TAQIRA",
-    "foundingDate": "2017",
-    "numberOfEmployees": { "@type": "QuantitativeValue", "value": "50+" },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Patna",
-      "addressRegion": "Bihar",
-      "addressCountry": "IN"
+const aboutLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Civadale Enterprise & TAQIRA",
+    "description": "Civadale Enterprise is a trusted manufacturer of industrial solutions. TAQIRA is the dedicated workwear brand specializing in ESD garments and cleanroom apparel.",
+    "url": "https://taqira.com/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Civadale Enterprise",
+      "alternateName": "TAQIRA",
+      "foundingDate": "2017",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": "50+" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nai Sadak Chowk, Patna City",
+        "addressLocality": "Patna",
+        "postalCode": "800008",
+        "addressRegion": "Bihar",
+        "addressCountry": "IN"
+      }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://taqira.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://taqira.com/about" }
+    ]
   }
-};
+];
 
 const About = () => {
   return (
     <Layout>
       <SEOHead
-        title="About Civadale Enterprise & TAQIRA | Our Story"
-        description="Civadale Enterprise is a trusted industrial supplier. TAQIRA, our workwear brand, specializes in ESD garments, cleanroom apparel & custom industrial uniforms."
+        title="About Civadale Enterprise & TAQIRA | Industrial PPE & Workwear Manufacturer Patna"
+        description="Civadale Enterprise — 8+ years supplying fire safety equipment, PPE, pneumatic tools, abrasives & packaging across India. TAQIRA is our ESD & cleanroom workwear brand."
         canonical="/about"
         jsonLd={aboutLd}
       />
@@ -91,8 +103,10 @@ const About = () => {
                 <div className="w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src={founderPortrait} 
-                    alt="Founder of Civadale Enterprise - Industrial supply leader in Patna, Bihar" 
+                    alt="Founder of Civadale Enterprise — leading industrial PPE and workwear supplier in Patna, Bihar, India" 
                     loading="eager"
+                    width={384}
+                    height={512}
                     className="w-full h-full object-cover grayscale"
                   />
                 </div>
